@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
-import { Sparkles, CheckCircle2, XCircle, BrainCircuit } from "lucide-react";
+import { Sparkles, CheckCircle2, XCircle, BrainCircuit, RefreshCw, AlertCircle } from "lucide-react";
 import { 
   useGetChapter, 
   getGetChapterQueryKey,
@@ -18,11 +18,12 @@ function VideoSection({ videoId }: { videoId: string }) {
   return (
     <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-xl">
       <iframe
-        src={`https://www.youtube.com/embed/${videoId}?rel=0`}
+        src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&fs=1`}
         title="Chapter Video"
         className="w-full h-full"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
         allowFullScreen
+        referrerPolicy="strict-origin-when-cross-origin"
       ></iframe>
     </div>
   );
@@ -45,6 +46,10 @@ function SummarySection({ chapterId }: { chapterId: string }) {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
+          <p className="text-sm text-muted-foreground flex items-center gap-2 animate-pulse">
+            <Sparkles className="w-4 h-4 text-primary" />
+            Generating AI summary… this takes about 15–20 seconds
+          </p>
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-5/6" />
           <Skeleton className="h-4 w-4/5" />
@@ -57,7 +62,24 @@ function SummarySection({ chapterId }: { chapterId: string }) {
     );
   }
 
-  if (error || !summary) return null;
+  if (error || !summary) {
+    return (
+      <Card className="border-white/5 bg-card/50">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <Sparkles className="w-5 h-5" /> AI Summary
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col items-center gap-3 py-8 text-center text-muted-foreground">
+          <AlertCircle className="w-8 h-8 text-destructive/60" />
+          <p>Could not load the AI summary. The server may still be warming up.</p>
+          <Button size="sm" variant="outline" onClick={() => window.location.reload()} className="gap-2">
+            <RefreshCw className="w-4 h-4" /> Retry
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="border-white/5 bg-primary/5 border-primary/20 relative overflow-hidden">
@@ -115,6 +137,10 @@ function McqSection({ chapterId }: { chapterId: string }) {
     return (
       <div className="space-y-6">
         <h3 className="text-xl font-bold">Practice Questions</h3>
+        <p className="text-sm text-muted-foreground flex items-center gap-2 animate-pulse">
+          <BrainCircuit className="w-4 h-4 text-primary" />
+          Generating MCQ questions… this takes about 15–20 seconds
+        </p>
         {[1, 2].map(i => (
           <Card key={i} className="border-white/5 bg-card/50">
             <CardContent className="p-6 space-y-4">
@@ -129,7 +155,22 @@ function McqSection({ chapterId }: { chapterId: string }) {
     );
   }
 
-  if (!mcqs || mcqs.length === 0) return null;
+  if (!mcqs || mcqs.length === 0) {
+    return (
+      <div className="space-y-4">
+        <h3 className="text-xl font-bold">Practice Questions</h3>
+        <Card className="border-white/5 bg-card/50">
+          <CardContent className="flex flex-col items-center gap-3 py-8 text-center text-muted-foreground">
+            <AlertCircle className="w-8 h-8 text-destructive/60" />
+            <p>Could not load practice questions. The server may still be warming up.</p>
+            <Button size="sm" variant="outline" onClick={() => window.location.reload()} className="gap-2">
+              <RefreshCw className="w-4 h-4" /> Retry
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">

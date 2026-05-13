@@ -8,7 +8,14 @@ import SubjectDetail from "@/pages/subject";
 import ChapterDetail from "@/pages/chapter";
 import NotFound from "@/pages/not-found";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 2,
+      staleTime: 1000 * 60 * 10,
+    },
+  },
+});
 
 function Router() {
   return (

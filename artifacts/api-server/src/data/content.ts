@@ -31,7 +31,7 @@ export const subjects: SubjectData[] = [
         number: 1,
         title: "Number Systems",
         description: "Real numbers, irrational numbers, and the number line",
-        youtubeVideoId: "q_SHr2Z4MiQ",
+        youtubeVideoId: "IMnSIaPcqiE",
         duration: "18:45",
       },
       {
@@ -40,7 +40,7 @@ export const subjects: SubjectData[] = [
         number: 2,
         title: "Polynomials",
         description: "Definition, degree, zeroes and factorisation of polynomials",
-        youtubeVideoId: "0hkNl7VmNbQ",
+        youtubeVideoId: "WwcsvWh69_Q",
         duration: "22:10",
       },
       {
@@ -49,7 +49,7 @@ export const subjects: SubjectData[] = [
         number: 3,
         title: "Coordinate Geometry",
         description: "Cartesian plane, coordinates and distance between two points",
-        youtubeVideoId: "ZRlKGKiGkGo",
+        youtubeVideoId: "1xOFcY5VtLM",
         duration: "20:30",
       },
       {
@@ -58,7 +58,7 @@ export const subjects: SubjectData[] = [
         number: 4,
         title: "Linear Equations in Two Variables",
         description: "Linear equations, solutions and graphical representation",
-        youtubeVideoId: "r5gYuNaKpYo",
+        youtubeVideoId: "rnudiJxVXxM",
         duration: "25:00",
       },
       {
@@ -67,7 +67,7 @@ export const subjects: SubjectData[] = [
         number: 5,
         title: "Introduction to Euclid's Geometry",
         description: "Euclid's definitions, axioms and postulates",
-        youtubeVideoId: "Ds_cCwBRX6E",
+        youtubeVideoId: "mxeXcTjQiuM",
         duration: "15:20",
       },
       {
@@ -76,7 +76,7 @@ export const subjects: SubjectData[] = [
         number: 6,
         title: "Lines and Angles",
         description: "Angles, parallel lines, transversals and their properties",
-        youtubeVideoId: "NkfIVLWP5Ac",
+        youtubeVideoId: "nEYldznpZmk",
         duration: "19:50",
       },
       {
@@ -85,7 +85,7 @@ export const subjects: SubjectData[] = [
         number: 7,
         title: "Triangles",
         description: "Congruence of triangles and their properties",
-        youtubeVideoId: "7Dm9P35rEgk",
+        youtubeVideoId: "wIeiqvdVCJI",
         duration: "28:15",
       },
       {
@@ -94,7 +94,7 @@ export const subjects: SubjectData[] = [
         number: 8,
         title: "Quadrilaterals",
         description: "Properties of parallelograms, rectangles, squares and rhombuses",
-        youtubeVideoId: "0sFjMoSEQtA",
+        youtubeVideoId: "STrfPXdTzUA",
         duration: "21:40",
       },
     ],
@@ -112,7 +112,7 @@ export const subjects: SubjectData[] = [
         number: 1,
         title: "Matter in Our Surroundings",
         description: "States of matter, interconversion and effect of temperature and pressure",
-        youtubeVideoId: "vdICUq7cIk8",
+        youtubeVideoId: "G3hza-lgnQs",
         duration: "24:30",
       },
       {
@@ -121,7 +121,7 @@ export const subjects: SubjectData[] = [
         number: 2,
         title: "Is Matter Around Us Pure?",
         description: "Mixtures, solutions, colloids and separation methods",
-        youtubeVideoId: "LRAFoWToG-4",
+        youtubeVideoId: "unsdSnTHP1s",
         duration: "26:15",
       },
       {
@@ -130,7 +130,7 @@ export const subjects: SubjectData[] = [
         number: 3,
         title: "Atoms and Molecules",
         description: "Laws of chemical combination, atomic and molecular masses",
-        youtubeVideoId: "9P7J5EsH4Ek",
+        youtubeVideoId: "g7ri3srcn1Q",
         duration: "30:00",
       },
       {
@@ -139,7 +139,7 @@ export const subjects: SubjectData[] = [
         number: 4,
         title: "Structure of the Atom",
         description: "Bohr's model, electronic configuration and valency",
-        youtubeVideoId: "lT-7GV-wMa8",
+        youtubeVideoId: "YzTPke4QcUY",
         duration: "28:45",
       },
       {
@@ -148,7 +148,7 @@ export const subjects: SubjectData[] = [
         number: 5,
         title: "The Fundamental Unit of Life",
         description: "Cell structure, organelles and their functions",
-        youtubeVideoId: "kqE6bwGzO7E",
+        youtubeVideoId: "qS7ZATxWByI",
         duration: "22:00",
       },
       {
@@ -157,7 +157,7 @@ export const subjects: SubjectData[] = [
         number: 6,
         title: "Tissues",
         description: "Plant and animal tissues and their types",
-        youtubeVideoId: "1iMX1sMBhWg",
+        youtubeVideoId: "PSwDpuw5kPA",
         duration: "25:30",
       },
       {
@@ -166,7 +166,7 @@ export const subjects: SubjectData[] = [
         number: 7,
         title: "Motion",
         description: "Distance, displacement, speed, velocity and acceleration",
-        youtubeVideoId: "VUsD-PoaHYo",
+        youtubeVideoId: "OzENYyB63iI",
         duration: "32:20",
       },
       {
@@ -175,7 +175,7 @@ export const subjects: SubjectData[] = [
         number: 8,
         title: "Force and Laws of Motion",
         description: "Newton's three laws of motion and their applications",
-        youtubeVideoId: "2z8lZs_OJ0I",
+        youtubeVideoId: "eeG9_f9ELBA",
         duration: "29:10",
       },
     ],
@@ -193,7 +193,7 @@ export const subjects: SubjectData[] = [
         number: 1,
         title: "The French Revolution",
         description: "Causes, events and impact of the French Revolution",
-        youtubeVideoId: "K0aXFpDiKqI",
+        youtubeVideoId: "qjuqPfy6gwU",
         duration: "35:00",
       },
       {
@@ -202,7 +202,7 @@ export const subjects: SubjectData[] = [
         number: 2,
         title: "Socialism in Europe and the Russian Revolution",
         description: "Rise of socialism and the Russian Revolution of 1917",
-        youtubeVideoId: "aYSPNtWF4oQ",
+        youtubeVideoId: "V1K-bhiaV9w",
         duration: "30:45",
       },
       {
@@ -211,7 +211,7 @@ export const subjects: SubjectData[] = [
         number: 3,
         title: "Nazism and the Rise of Hitler",
         description: "Rise of Hitler, Nazi ideology and World War II",
-        youtubeVideoId: "e5k2SVG-TiA",
+        youtubeVideoId: "goEZfKiuu0Q",
         duration: "32:30",
       },
       {
@@ -220,7 +220,7 @@ export const subjects: SubjectData[] = [
         number: 4,
         title: "India – Size and Location",
         description: "India's geographical position, size and neighbouring countries",
-        youtubeVideoId: "4cH5JFjxAkE",
+        youtubeVideoId: "-mBIBH5TAzE",
         duration: "18:20",
       },
       {
@@ -229,7 +229,7 @@ export const subjects: SubjectData[] = [
         number: 5,
         title: "Physical Features of India",
         description: "Himalayan mountains, northern plains, plateaus and coastal plains",
-        youtubeVideoId: "ZFiJJbhJl8s",
+        youtubeVideoId: "j4LdeQDEYlE",
         duration: "22:15",
       },
       {
@@ -238,7 +238,7 @@ export const subjects: SubjectData[] = [
         number: 6,
         title: "What is Democracy? Why Democracy?",
         description: "Features, merits and demerits of democracy",
-        youtubeVideoId: "KHal0gLR3h8",
+        youtubeVideoId: "k_OoOzQSmQI",
         duration: "20:00",
       },
       {
@@ -247,7 +247,7 @@ export const subjects: SubjectData[] = [
         number: 7,
         title: "Constitutional Design",
         description: "Indian constitution, its making and guiding values",
-        youtubeVideoId: "3w_jBJLpJ-0",
+        youtubeVideoId: "LK_40aJa8h0",
         duration: "25:40",
       },
       {
@@ -256,7 +256,7 @@ export const subjects: SubjectData[] = [
         number: 8,
         title: "The Story of Village Palampur",
         description: "Economic activities, production and farming in a village",
-        youtubeVideoId: "sQg8TxQKPd4",
+        youtubeVideoId: "ZmJ1pNWltW8",
         duration: "22:50",
       },
     ],
@@ -274,7 +274,7 @@ export const subjects: SubjectData[] = [
         number: 1,
         title: "The Fun They Had",
         description: "A futuristic story about mechanical teachers and schools",
-        youtubeVideoId: "uqTkCZ4a3XY",
+        youtubeVideoId: "A30OuLLUa-g",
         duration: "15:30",
       },
       {
@@ -283,7 +283,7 @@ export const subjects: SubjectData[] = [
         number: 2,
         title: "The Sound of Music",
         description: "Stories of Evelyn Glennie and Bismillah Khan",
-        youtubeVideoId: "WIR7xbD-LJY",
+        youtubeVideoId: "FLgCmU1e41c",
         duration: "18:00",
       },
       {
@@ -292,7 +292,7 @@ export const subjects: SubjectData[] = [
         number: 3,
         title: "The Little Girl",
         description: "A story about a child's fear and eventual love for her father",
-        youtubeVideoId: "eDxSwOp-Yv4",
+        youtubeVideoId: "0aKcX6eqa9w",
         duration: "16:45",
       },
       {
@@ -301,7 +301,7 @@ export const subjects: SubjectData[] = [
         number: 4,
         title: "A Truly Beautiful Mind",
         description: "The life of Albert Einstein and his contributions",
-        youtubeVideoId: "OBzHqgpKwXE",
+        youtubeVideoId: "IhlX9aAcEgA",
         duration: "20:10",
       },
       {
@@ -310,7 +310,7 @@ export const subjects: SubjectData[] = [
         number: 5,
         title: "The Snake and the Mirror",
         description: "A humorous story about a doctor and a snake",
-        youtubeVideoId: "p8WIuWmWB8E",
+        youtubeVideoId: "ZaPNnjB-k48",
         duration: "17:20",
       },
       {
@@ -319,7 +319,7 @@ export const subjects: SubjectData[] = [
         number: 6,
         title: "My Childhood",
         description: "Memories of APJ Abdul Kalam's childhood and early life",
-        youtubeVideoId: "kzgMM1sqZ0M",
+        youtubeVideoId: "oKsrn0ytX3k",
         duration: "19:35",
       },
       {
@@ -328,7 +328,7 @@ export const subjects: SubjectData[] = [
         number: 7,
         title: "Packing",
         description: "A humorous account of packing for a holiday",
-        youtubeVideoId: "9wQdwBNyxFM",
+        youtubeVideoId: "GTjCWgqkR74",
         duration: "14:55",
       },
       {
@@ -337,7 +337,7 @@ export const subjects: SubjectData[] = [
         number: 8,
         title: "Reach for the Top",
         description: "Stories of Santosh Yadav and Maria Sharapova",
-        youtubeVideoId: "IibBHJnTCjY",
+        youtubeVideoId: "IksSzm7mIwY",
         duration: "21:00",
       },
     ],
