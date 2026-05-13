@@ -3,13 +3,17 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: CBSE Class 9 Education App API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: subjects
+    description: Subjects and chapters
+  - name: ai
+    description: AI-powered summaries and MCQs
 paths:
   /healthz:
     get:
@@ -24,6 +28,110 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /subjects:
+    get:
+      operationId: listSubjects
+      tags: [subjects]
+      summary: List all subjects
+      responses:
+        "200":
+          description: List of subjects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Subject"
+
+  /subjects/{subjectId}/chapters:
+    get:
+      operationId: listChapters
+      tags: [subjects]
+      summary: List chapters for a subject
+      parameters:
+        - name: subjectId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of chapters
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Chapter"
+        "404":
+          description: Subject not found
+
+  /chapters/{chapterId}:
+    get:
+      operationId: getChapter
+      tags: [subjects]
+      summary: Get a specific chapter with video and content
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Chapter detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChapterDetail"
+        "404":
+          description: Chapter not found
+
+  /chapters/{chapterId}/summary:
+    get:
+      operationId: getChapterSummary
+      tags: [ai]
+      summary: Get AI-generated summary and key points for a chapter
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: AI summary and key points
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChapterSummary"
+        "404":
+          description: Chapter not found
+
+  /chapters/{chapterId}/mcqs:
+    get:
+      operationId: getChapterMcqs
+      tags: [ai]
+      summary: Get MCQ questions for a chapter
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: MCQ questions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/McqQuestion"
+        "404":
+          description: Chapter not found
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +142,89 @@ components:
       required:
         - status
 
+    Subject:
+      type: object
+      required: [id, name, description, icon, color, chapterCount]
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        icon:
+          type: string
+        color:
+          type: string
+        chapterCount:
+          type: integer
+
+    Chapter:
+      type: object
+      required: [id, subjectId, number, title, description, youtubeVideoId, duration]
+      properties:
+        id:
+          type: string
+        subjectId:
+          type: string
+        number:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        youtubeVideoId:
+          type: string
+        duration:
+          type: string
+
+    ChapterDetail:
+      type: object
+      required: [id, subjectId, number, title, description, youtubeVideoId, duration, subjectName]
+      properties:
+        id:
+          type: string
+        subjectId:
+          type: string
+        number:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        youtubeVideoId:
+          type: string
+        duration:
+          type: string
+        subjectName:
+          type: string
+
+    ChapterSummary:
+      type: object
+      required: [chapterId, summary, keyPoints]
+      properties:
+        chapterId:
+          type: string
+        summary:
+          type: string
+        keyPoints:
+          type: array
+          items:
+            type: string
+
+    McqQuestion:
+      type: object
+      required: [id, question, options, correctIndex, explanation]
+      properties:
+        id:
+          type: string
+        question:
+          type: string
+        options:
+          type: array
+          items:
+            type: string
+        correctIndex:
+          type: integer
+        explanation:
+          type: string
