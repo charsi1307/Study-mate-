@@ -12,6 +12,8 @@ tags:
     description: Health operations
   - name: subjects
     description: Subjects and chapters
+  - name: notes
+    description: Chapter-wise notes with definitions, formulas, and key points
   - name: ai
     description: AI-powered summaries and MCQs
 paths:
@@ -108,6 +110,48 @@ paths:
                 $ref: "#/components/schemas/ChapterSummary"
         "404":
           description: Chapter not found
+
+  /notes:
+    get:
+      operationId: listNotes
+      tags: [notes]
+      summary: List all chapter notes with optional subject filter
+      parameters:
+        - name: subjectId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of chapter notes
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChapterNotes"
+
+  /notes/{chapterId}:
+    get:
+      operationId: getChapterNotes
+      tags: [notes]
+      summary: Get notes for a specific chapter
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Chapter notes
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChapterNotes"
+        "404":
+          description: Notes not found
 
   /chapters/{chapterId}/mcqs:
     get:
@@ -227,4 +271,31 @@ components:
         correctIndex:
           type: integer
         explanation:
+          type: string
+
+    ChapterNotes:
+      type: object
+      required: [chapterId, subjectId, chapterNumber, chapterTitle, definitions, formulas, keyPoints, summary]
+      properties:
+        chapterId:
+          type: string
+        subjectId:
+          type: string
+        chapterNumber:
+          type: integer
+        chapterTitle:
+          type: string
+        definitions:
+          type: array
+          items:
+            type: string
+        formulas:
+          type: array
+          items:
+            type: string
+        keyPoints:
+          type: array
+          items:
+            type: string
+        summary:
           type: string

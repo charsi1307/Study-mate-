@@ -3,8 +3,8 @@ import { Layout } from "@/components/layout";
 import { Link } from "wouter";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { BookA, Atom, Globe, Calculator, ArrowRight } from "lucide-react";
-import type { Subject } from "@workspace/api-client-react/src/generated/api.schemas";
+import { BookA, Atom, Globe, Calculator, ArrowRight, Scroll } from "lucide-react";
+import type { Subject } from "@workspace/api-client-react";
 
 // Icon mapping helper
 const SubjectIcon = ({ name, className }: { name: string; className?: string }) => {
@@ -13,6 +13,7 @@ const SubjectIcon = ({ name, className }: { name: string; className?: string }) 
   if (lowerName.includes("science") && !lowerName.includes("social")) return <Atom className={className} />;
   if (lowerName.includes("social")) return <Globe className={className} />;
   if (lowerName.includes("english")) return <BookA className={className} />;
+  if (lowerName.includes("hindi")) return <Scroll className={className} />;
   return <BookA className={className} />;
 };
 

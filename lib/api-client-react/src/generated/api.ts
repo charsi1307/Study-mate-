@@ -16,8 +16,10 @@ import type {
 import type {
   Chapter,
   ChapterDetail,
+  ChapterNotes,
   ChapterSummary,
   HealthStatus,
+  ListNotesParams,
   McqQuestion,
   Subject,
 } from "./api.schemas";
@@ -437,6 +439,188 @@ export function useGetChapterSummary<
   },
 ): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
   const queryOptions = getGetChapterSummaryQueryOptions(chapterId, options);
+
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}
+
+/**
+ * @summary List all chapter notes with optional subject filter
+ */
+export const getListNotesUrl = (params?: ListNotesParams) => {
+  const normalizedParams = new URLSearchParams();
+
+  Object.entries(params || {}).forEach(([key, value]) => {
+    if (value !== undefined) {
+      normalizedParams.append(key, value === null ? "null" : value.toString());
+    }
+  });
+
+  const stringifiedParams = normalizedParams.toString();
+
+  return stringifiedParams.length > 0
+    ? `/api/notes?${stringifiedParams}`
+    : `/api/notes`;
+};
+
+export const listNotes = async (
+  params?: ListNotesParams,
+  options?: RequestInit,
+): Promise<ChapterNotes[]> => {
+  return customFetch<ChapterNotes[]>(getListNotesUrl(params), {
+    ...options,
+    method: "GET",
+  });
+};
+
+export const getListNotesQueryKey = (params?: ListNotesParams) => {
+  return [`/api/notes`, ...(params ? [params] : [])] as const;
+};
+
+export const getListNotesQueryOptions = <
+  TData = Awaited<ReturnType<typeof listNotes>>,
+  TError = ErrorType<unknown>,
+>(
+  params?: ListNotesParams,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof listNotes>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
+
+  const queryKey = queryOptions?.queryKey ?? getListNotesQueryKey(params);
+
+  const queryFn: QueryFunction<Awaited<ReturnType<typeof listNotes>>> = ({
+    signal,
+  }) => listNotes(params, { signal, ...requestOptions });
+
+  return { queryKey, queryFn, ...queryOptions } as UseQueryOptions<
+    Awaited<ReturnType<typeof listNotes>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
+
+export type ListNotesQueryResult = NonNullable<
+  Awaited<ReturnType<typeof listNotes>>
+>;
+export type ListNotesQueryError = ErrorType<unknown>;
+
+/**
+ * @summary List all chapter notes with optional subject filter
+ */
+
+export function useListNotes<
+  TData = Awaited<ReturnType<typeof listNotes>>,
+  TError = ErrorType<unknown>,
+>(
+  params?: ListNotesParams,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof listNotes>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getListNotesQueryOptions(params, options);
+
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}
+
+/**
+ * @summary Get notes for a specific chapter
+ */
+export const getGetChapterNotesUrl = (chapterId: string) => {
+  return `/api/notes/${chapterId}`;
+};
+
+export const getChapterNotes = async (
+  chapterId: string,
+  options?: RequestInit,
+): Promise<ChapterNotes> => {
+  return customFetch<ChapterNotes>(getGetChapterNotesUrl(chapterId), {
+    ...options,
+    method: "GET",
+  });
+};
+
+export const getGetChapterNotesQueryKey = (chapterId: string) => {
+  return [`/api/notes/${chapterId}`] as const;
+};
+
+export const getGetChapterNotesQueryOptions = <
+  TData = Awaited<ReturnType<typeof getChapterNotes>>,
+  TError = ErrorType<void>,
+>(
+  chapterId: string,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getChapterNotes>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
+
+  const queryKey =
+    queryOptions?.queryKey ?? getGetChapterNotesQueryKey(chapterId);
+
+  const queryFn: QueryFunction<Awaited<ReturnType<typeof getChapterNotes>>> = ({
+    signal,
+  }) => getChapterNotes(chapterId, { signal, ...requestOptions });
+
+  return {
+    queryKey,
+    queryFn,
+    enabled: !!chapterId,
+    ...queryOptions,
+  } as UseQueryOptions<
+    Awaited<ReturnType<typeof getChapterNotes>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
+
+export type GetChapterNotesQueryResult = NonNullable<
+  Awaited<ReturnType<typeof getChapterNotes>>
+>;
+export type GetChapterNotesQueryError = ErrorType<void>;
+
+/**
+ * @summary Get notes for a specific chapter
+ */
+
+export function useGetChapterNotes<
+  TData = Awaited<ReturnType<typeof getChapterNotes>>,
+  TError = ErrorType<void>,
+>(
+  chapterId: string,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getChapterNotes>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getGetChapterNotesQueryOptions(chapterId, options);
 
   const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
     queryKey: QueryKey;

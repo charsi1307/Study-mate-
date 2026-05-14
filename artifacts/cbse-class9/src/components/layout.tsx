@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "wouter";
-import { ChevronRight, Home, BookOpen, GraduationCap } from "lucide-react";
+import { ChevronRight, Home, BookOpen, GraduationCap, FileText } from "lucide-react";
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,6 +19,13 @@ export function Layout({ children, breadcrumbs = [] }: LayoutProps) {
             <GraduationCap className="h-6 w-6" />
             <span>StudyMate</span>
           </Link>
+
+          <div className="hidden sm:flex items-center gap-1 ml-auto">
+            <Link href="/notes" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-1.5 rounded-lg hover:bg-white/5">
+              <FileText className="h-4 w-4" />
+              Notes
+            </Link>
+          </div>
 
           {breadcrumbs.length > 0 && (
             <>

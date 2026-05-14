@@ -52,3 +52,18 @@ export interface McqQuestion {
   correctIndex: number;
   explanation: string;
 }
+
+export interface ChapterNotes {
+  chapterId: string;
+  subjectId: string;
+  chapterNumber: number;
+  chapterTitle: string;
+  definitions: string[];
+  formulas: string[];
+  keyPoints: string[];
+  summary: string;
+}
+
+export type ListNotesParams = {
+  subjectId?: string;
+};

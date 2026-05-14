@@ -8,7 +8,9 @@
 
 export * from "./chapter";
 export * from "./chapterDetail";
+export * from "./chapterNotes";
 export * from "./chapterSummary";
 export * from "./healthStatus";
+export * from "./listNotesParams";
 export * from "./mcqQuestion";
 export * from "./subject";

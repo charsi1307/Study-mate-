@@ -4,7 +4,7 @@ import { Link, useParams } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Clock, PlayCircle } from "lucide-react";
-import type { Chapter } from "@workspace/api-client-react/src/generated/api.schemas";
+import type { Chapter } from "@workspace/api-client-react";
 
 export default function SubjectDetail() {
   const { subjectId } = useParams();

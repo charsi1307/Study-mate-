@@ -78,6 +78,43 @@ export const GetChapterSummaryResponse = zod.object({
 });
 
 /**
+ * @summary List all chapter notes with optional subject filter
+ */
+export const ListNotesQueryParams = zod.object({
+  subjectId: zod.coerce.string().optional(),
+});
+
+export const ListNotesResponseItem = zod.object({
+  chapterId: zod.string(),
+  subjectId: zod.string(),
+  chapterNumber: zod.number(),
+  chapterTitle: zod.string(),
+  definitions: zod.array(zod.string()),
+  formulas: zod.array(zod.string()),
+  keyPoints: zod.array(zod.string()),
+  summary: zod.string(),
+});
+export const ListNotesResponse = zod.array(ListNotesResponseItem);
+
+/**
+ * @summary Get notes for a specific chapter
+ */
+export const GetChapterNotesParams = zod.object({
+  chapterId: zod.coerce.string(),
+});
+
+export const GetChapterNotesResponse = zod.object({
+  chapterId: zod.string(),
+  subjectId: zod.string(),
+  chapterNumber: zod.number(),
+  chapterTitle: zod.string(),
+  definitions: zod.array(zod.string()),
+  formulas: zod.array(zod.string()),
+  keyPoints: zod.array(zod.string()),
+  summary: zod.string(),
+});
+
+/**
  * @summary Get MCQ questions for a chapter
  */
 export const GetChapterMcqsParams = zod.object({
