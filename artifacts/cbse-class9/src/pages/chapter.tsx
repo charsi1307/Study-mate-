@@ -131,7 +131,7 @@ function PracticeQuestionsSection({ chapterId }: { chapterId: string }) {
     return (
       <div className="space-y-6">
         <div className="flex items-center gap-2 mb-2">
-          <h3 className="text-xl font-bold">Practice Questions</h3>
+          <h3 className="text-xl font-bold">Previous Year Questions</h3>
         </div>
         {[1, 2, 3].map(i => (
           <Card key={i} className="border-white/5 bg-card/50">
@@ -150,7 +150,7 @@ function PracticeQuestionsSection({ chapterId }: { chapterId: string }) {
     return (
       <div className="space-y-4">
         <div className="flex items-center gap-2 mb-2">
-          <h3 className="text-xl font-bold">Practice Questions</h3>
+          <h3 className="text-xl font-bold">Previous Year Questions</h3>
         </div>
         <Card className="border-white/5 bg-card/50">
           <CardContent className="flex flex-col items-center gap-3 py-8 text-center text-muted-foreground">
@@ -170,7 +170,7 @@ function PracticeQuestionsSection({ chapterId }: { chapterId: string }) {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-2 mb-2">
-        <h3 className="text-xl font-bold">Practice Questions</h3>
+        <h3 className="text-xl font-bold">Previous Year Questions</h3>
         <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
           {questions.length} questions
         </span>
@@ -250,7 +250,7 @@ function McqSection({ chapterId }: { chapterId: string }) {
   if (isLoading) {
     return (
       <div className="space-y-6">
-        <h3 className="text-xl font-bold">Practice Questions</h3>
+        <h3 className="text-xl font-bold">MCQ Practice</h3>
         <p className="text-sm text-muted-foreground flex items-center gap-2 animate-pulse">
           <BrainCircuit className="w-4 h-4 text-primary" />
           Generating MCQ questions… this takes about 15–20 seconds
@@ -272,11 +272,11 @@ function McqSection({ chapterId }: { chapterId: string }) {
   if (!mcqs || mcqs.length === 0) {
     return (
       <div className="space-y-4">
-        <h3 className="text-xl font-bold">Practice Questions</h3>
+        <h3 className="text-xl font-bold">MCQ Practice</h3>
         <Card className="border-white/5 bg-card/50">
           <CardContent className="flex flex-col items-center gap-3 py-8 text-center text-muted-foreground">
             <AlertCircle className="w-8 h-8 text-destructive/60" />
-            <p>Could not load practice questions. The server may still be warming up.</p>
+            <p>Could not load MCQ questions. The server may still be warming up.</p>
             <Button size="sm" variant="outline" onClick={() => window.location.reload()} className="gap-2">
               <RefreshCw className="w-4 h-4" /> Retry
             </Button>
@@ -289,7 +289,7 @@ function McqSection({ chapterId }: { chapterId: string }) {
   return (
     <div className="space-y-6">
       <div className="flex items-center gap-2 mb-2">
-        <h3 className="text-xl font-bold">Practice Questions</h3>
+        <h3 className="text-xl font-bold">MCQ Practice</h3>
         <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
           {mcqs.length} MCQs
         </span>
