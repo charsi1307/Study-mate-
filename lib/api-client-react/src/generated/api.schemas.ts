@@ -64,6 +64,24 @@ export interface ChapterNotes {
   summary: string;
 }
 
+export interface PracticeQuestion {
+  question: string;
+  marks: number;
+  answer: string;
+}
+
+export interface ChapterQuestions {
+  chapterId: string;
+  subjectId: string;
+  chapterNumber: number;
+  chapterTitle: string;
+  questions: PracticeQuestion[];
+}
+
 export type ListNotesParams = {
+  subjectId?: string;
+};
+
+export type ListQuestionsParams = {
   subjectId?: string;
 };

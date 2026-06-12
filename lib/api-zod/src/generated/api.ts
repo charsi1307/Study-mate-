@@ -115,6 +115,49 @@ export const GetChapterNotesResponse = zod.object({
 });
 
 /**
+ * @summary List all chapter questions with optional subject filter
+ */
+export const ListQuestionsQueryParams = zod.object({
+  subjectId: zod.coerce.string().optional(),
+});
+
+export const ListQuestionsResponseItem = zod.object({
+  chapterId: zod.string(),
+  subjectId: zod.string(),
+  chapterNumber: zod.number(),
+  chapterTitle: zod.string(),
+  questions: zod.array(
+    zod.object({
+      question: zod.string(),
+      marks: zod.number(),
+      answer: zod.string(),
+    }),
+  ),
+});
+export const ListQuestionsResponse = zod.array(ListQuestionsResponseItem);
+
+/**
+ * @summary Get practice questions for a specific chapter
+ */
+export const GetChapterQuestionsParams = zod.object({
+  chapterId: zod.coerce.string(),
+});
+
+export const GetChapterQuestionsResponse = zod.object({
+  chapterId: zod.string(),
+  subjectId: zod.string(),
+  chapterNumber: zod.number(),
+  chapterTitle: zod.string(),
+  questions: zod.array(
+    zod.object({
+      question: zod.string(),
+      marks: zod.number(),
+      answer: zod.string(),
+    }),
+  ),
+});
+
+/**
  * @summary Get MCQ questions for a chapter
  */
 export const GetChapterMcqsParams = zod.object({

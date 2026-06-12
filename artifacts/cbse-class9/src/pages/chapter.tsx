@@ -11,7 +11,9 @@ import {
   useGetChapterSummary,
   getGetChapterSummaryQueryKey,
   useGetChapterMcqs,
-  getGetChapterMcqsQueryKey
+  getGetChapterMcqsQueryKey,
+  useGetChapterQuestions,
+  getGetChapterQuestionsQueryKey,
 } from "@workspace/api-client-react";
 
 function VideoSection({ videoId }: { videoId: string }) {
@@ -108,6 +110,118 @@ function SummarySection({ chapterId }: { chapterId: string }) {
         </div>
       </CardContent>
     </Card>
+  );
+}
+
+function PracticeQuestionsSection({ chapterId }: { chapterId: string }) {
+  const { data: chapterQuestions, isLoading, error } = useGetChapterQuestions(chapterId, {
+    query: {
+      enabled: !!chapterId,
+      queryKey: getGetChapterQuestionsQueryKey(chapterId),
+    }
+  });
+
+  const [expanded, setExpanded] = useState<Record<number, boolean>>({});
+
+  const toggleAnswer = (index: number) => {
+    setExpanded(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  if (isLoading) {
+    return (
+      <div className="space-y-6">
+        <div className="flex items-center gap-2 mb-2">
+          <h3 className="text-xl font-bold">Practice Questions</h3>
+        </div>
+        {[1, 2, 3].map(i => (
+          <Card key={i} className="border-white/5 bg-card/50">
+            <CardContent className="p-6 space-y-4">
+              <Skeleton className="h-6 w-3/4" />
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-5/6" />
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    );
+  }
+
+  if (error || !chapterQuestions || !chapterQuestions.questions || chapterQuestions.questions.length === 0) {
+    return (
+      <div className="space-y-4">
+        <div className="flex items-center gap-2 mb-2">
+          <h3 className="text-xl font-bold">Practice Questions</h3>
+        </div>
+        <Card className="border-white/5 bg-card/50">
+          <CardContent className="flex flex-col items-center gap-3 py-8 text-center text-muted-foreground">
+            <AlertCircle className="w-8 h-8 text-destructive/60" />
+            <p>Could not load practice questions. The server may still be warming up.</p>
+            <Button size="sm" variant="outline" onClick={() => window.location.reload()} className="gap-2">
+              <RefreshCw className="w-4 h-4" /> Retry
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  const questions = chapterQuestions.questions;
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center gap-2 mb-2">
+        <h3 className="text-xl font-bold">Practice Questions</h3>
+        <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+          {questions.length} questions
+        </span>
+      </div>
+      
+      {questions.map((q, index) => (
+        <Card key={index} className="border-white/5 bg-card overflow-hidden">
+          <div className="h-1 w-full bg-muted">
+            <div className="h-full bg-primary/50" style={{ width: `${((index + 1) / questions.length) * 100}%` }} />
+          </div>
+          <CardContent className="p-6">
+            <div className="flex items-start gap-3 mb-4">
+              <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">
+                {index + 1}
+              </span>
+              <div className="flex-1">
+                <p className="text-lg font-medium leading-relaxed">
+                  {q.question}
+                </p>
+              </div>
+              <span className={`flex-shrink-0 px-2.5 py-1 rounded-full text-xs font-semibold ${
+                q.marks === 5 ? 'bg-amber-500/10 text-amber-400 border border-amber-500/20' :
+                q.marks === 3 ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20' :
+                'bg-green-500/10 text-green-400 border border-green-500/20'
+              }`}>
+                {q.marks} marks
+              </span>
+            </div>
+
+            <div className="ml-11">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => toggleAnswer(index)}
+                className={`w-full sm:w-auto transition-all ${
+                  expanded[index] ? 'bg-primary/10 border-primary/30 text-primary' : ''
+                }`}
+              >
+                {expanded[index] ? 'Hide Answer' : 'View Answer'}
+              </Button>
+              
+              {expanded[index] && (
+                <div className="mt-4 p-4 rounded-xl bg-primary/5 border border-primary/10 text-foreground/90 leading-relaxed whitespace-pre-line">
+                  {q.answer}
+                </div>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
   );
 }
 
@@ -312,6 +426,8 @@ export default function ChapterDetail() {
           <>
             <VideoSection videoId={chapter.youtubeVideoId} />
             <SummarySection chapterId={chapter.id} />
+            <div className="h-px bg-border/50 w-full" />
+            <PracticeQuestionsSection chapterId={chapter.id} />
             <div className="h-px bg-border/50 w-full" />
             <McqSection chapterId={chapter.id} />
           </>

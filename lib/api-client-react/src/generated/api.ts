@@ -17,9 +17,11 @@ import type {
   Chapter,
   ChapterDetail,
   ChapterNotes,
+  ChapterQuestions,
   ChapterSummary,
   HealthStatus,
   ListNotesParams,
+  ListQuestionsParams,
   McqQuestion,
   Subject,
 } from "./api.schemas";
@@ -621,6 +623,189 @@ export function useGetChapterNotes<
   },
 ): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
   const queryOptions = getGetChapterNotesQueryOptions(chapterId, options);
+
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}
+
+/**
+ * @summary List all chapter questions with optional subject filter
+ */
+export const getListQuestionsUrl = (params?: ListQuestionsParams) => {
+  const normalizedParams = new URLSearchParams();
+
+  Object.entries(params || {}).forEach(([key, value]) => {
+    if (value !== undefined) {
+      normalizedParams.append(key, value === null ? "null" : value.toString());
+    }
+  });
+
+  const stringifiedParams = normalizedParams.toString();
+
+  return stringifiedParams.length > 0
+    ? `/api/questions?${stringifiedParams}`
+    : `/api/questions`;
+};
+
+export const listQuestions = async (
+  params?: ListQuestionsParams,
+  options?: RequestInit,
+): Promise<ChapterQuestions[]> => {
+  return customFetch<ChapterQuestions[]>(getListQuestionsUrl(params), {
+    ...options,
+    method: "GET",
+  });
+};
+
+export const getListQuestionsQueryKey = (params?: ListQuestionsParams) => {
+  return [`/api/questions`, ...(params ? [params] : [])] as const;
+};
+
+export const getListQuestionsQueryOptions = <
+  TData = Awaited<ReturnType<typeof listQuestions>>,
+  TError = ErrorType<unknown>,
+>(
+  params?: ListQuestionsParams,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof listQuestions>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
+
+  const queryKey = queryOptions?.queryKey ?? getListQuestionsQueryKey(params);
+
+  const queryFn: QueryFunction<Awaited<ReturnType<typeof listQuestions>>> = ({
+    signal,
+  }) => listQuestions(params, { signal, ...requestOptions });
+
+  return { queryKey, queryFn, ...queryOptions } as UseQueryOptions<
+    Awaited<ReturnType<typeof listQuestions>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
+
+export type ListQuestionsQueryResult = NonNullable<
+  Awaited<ReturnType<typeof listQuestions>>
+>;
+export type ListQuestionsQueryError = ErrorType<unknown>;
+
+/**
+ * @summary List all chapter questions with optional subject filter
+ */
+
+export function useListQuestions<
+  TData = Awaited<ReturnType<typeof listQuestions>>,
+  TError = ErrorType<unknown>,
+>(
+  params?: ListQuestionsParams,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof listQuestions>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getListQuestionsQueryOptions(params, options);
+
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}
+
+/**
+ * @summary Get practice questions for a specific chapter
+ */
+export const getGetChapterQuestionsUrl = (chapterId: string) => {
+  return `/api/questions/${chapterId}`;
+};
+
+export const getChapterQuestions = async (
+  chapterId: string,
+  options?: RequestInit,
+): Promise<ChapterQuestions> => {
+  return customFetch<ChapterQuestions>(getGetChapterQuestionsUrl(chapterId), {
+    ...options,
+    method: "GET",
+  });
+};
+
+export const getGetChapterQuestionsQueryKey = (chapterId: string) => {
+  return [`/api/questions/${chapterId}`] as const;
+};
+
+export const getGetChapterQuestionsQueryOptions = <
+  TData = Awaited<ReturnType<typeof getChapterQuestions>>,
+  TError = ErrorType<void>,
+>(
+  chapterId: string,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getChapterQuestions>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
+
+  const queryKey =
+    queryOptions?.queryKey ?? getGetChapterQuestionsQueryKey(chapterId);
+
+  const queryFn: QueryFunction<
+    Awaited<ReturnType<typeof getChapterQuestions>>
+  > = ({ signal }) =>
+    getChapterQuestions(chapterId, { signal, ...requestOptions });
+
+  return {
+    queryKey,
+    queryFn,
+    enabled: !!chapterId,
+    ...queryOptions,
+  } as UseQueryOptions<
+    Awaited<ReturnType<typeof getChapterQuestions>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
+
+export type GetChapterQuestionsQueryResult = NonNullable<
+  Awaited<ReturnType<typeof getChapterQuestions>>
+>;
+export type GetChapterQuestionsQueryError = ErrorType<void>;
+
+/**
+ * @summary Get practice questions for a specific chapter
+ */
+
+export function useGetChapterQuestions<
+  TData = Awaited<ReturnType<typeof getChapterQuestions>>,
+  TError = ErrorType<void>,
+>(
+  chapterId: string,
+  options?: {
+    query?: UseQueryOptions<
+      Awaited<ReturnType<typeof getChapterQuestions>>,
+      TError,
+      TData
+    >;
+    request?: SecondParameter<typeof customFetch>;
+  },
+): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getGetChapterQuestionsQueryOptions(chapterId, options);
 
   const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
     queryKey: QueryKey;

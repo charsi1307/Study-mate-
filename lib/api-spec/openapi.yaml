@@ -14,6 +14,8 @@ tags:
     description: Subjects and chapters
   - name: notes
     description: Chapter-wise notes with definitions, formulas, and key points
+  - name: questions
+    description: Chapter-wise practice questions with marks and answers
   - name: ai
     description: AI-powered summaries and MCQs
 paths:
@@ -152,6 +154,48 @@ paths:
                 $ref: "#/components/schemas/ChapterNotes"
         "404":
           description: Notes not found
+
+  /questions:
+    get:
+      operationId: listQuestions
+      tags: [questions]
+      summary: List all chapter questions with optional subject filter
+      parameters:
+        - name: subjectId
+          in: query
+          required: false
+          schema:
+            type: string
+      responses:
+        "200":
+          description: List of chapter questions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ChapterQuestions"
+
+  /questions/{chapterId}:
+    get:
+      operationId: getChapterQuestions
+      tags: [questions]
+      summary: Get practice questions for a specific chapter
+      parameters:
+        - name: chapterId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Chapter questions
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChapterQuestions"
+        "404":
+          description: Questions not found
 
   /chapters/{chapterId}/mcqs:
     get:
@@ -299,3 +343,31 @@ components:
             type: string
         summary:
           type: string
+
+    PracticeQuestion:
+      type: object
+      required: [question, marks, answer]
+      properties:
+        question:
+          type: string
+        marks:
+          type: integer
+        answer:
+          type: string
+
+    ChapterQuestions:
+      type: object
+      required: [chapterId, subjectId, chapterNumber, chapterTitle, questions]
+      properties:
+        chapterId:
+          type: string
+        subjectId:
+          type: string
+        chapterNumber:
+          type: integer
+        chapterTitle:
+          type: string
+        questions:
+          type: array
+          items:
+            $ref: "#/components/schemas/PracticeQuestion"
