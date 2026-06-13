@@ -17,8 +17,22 @@ export interface ChapterData {
   duration: string;
 }
 
-const hindiKshitijIds = ["jD_bYMq2m8Y","xYXhA8fvS_g","0_QVkb5wvec","sVMpSbrn3VM","-eA9pBaQRKs","JDs3Ayqm7-4","3n1P6Vpww6M","4LCWEYsf8DA","xYXhA8fvS_g","sVMpSbrn3VM","0_QVkb5wvec","sVMpSbrn3VM","jD_bYMq2m8Y","sVMpSbrn3VM","-eA9pBaQRKs","sVMpSbrn3VM","4LCWEYsf8DA"];
-const hindiSparshIds = ["S2hB4holnd0","S2hB4holnd0","S2hB4holnd0","S2hB4holnd0","S2hB4holnd0","S2hB4holnd0","jkdW5JorvQI","0-FUQjTrmNQ","OGjIedwVULk","S2hB4holnd0","S2hB4holnd0","S2hB4holnd0","vSo7Iq0dzhU","l-cC2eqo77k","_dibA0wwEpE"];
+// TODO: Replace with actual YouTube video IDs from approved channels
+// Hindi Kshitij (Part 2) - Magnet Brains Education
+// Hindi Sparsh - Magnet Brains Education
+const hindiKshitijIds = [
+  "PLACEHOLDER_K1", "PLACEHOLDER_K2", "PLACEHOLDER_K3", "PLACEHOLDER_K4",
+  "PLACEHOLDER_K5", "PLACEHOLDER_K6", "PLACEHOLDER_K7", "PLACEHOLDER_K8",
+  "PLACEHOLDER_K9", "PLACEHOLDER_K10", "PLACEHOLDER_K11", "PLACEHOLDER_K12",
+  "PLACEHOLDER_K13", "PLACEHOLDER_K14", "PLACEHOLDER_K15", "PLACEHOLDER_K16",
+  "PLACEHOLDER_K17"
+];
+const hindiSparshIds = [
+  "PLACEHOLDER_S1", "PLACEHOLDER_S2", "PLACEHOLDER_S3", "PLACEHOLDER_S4",
+  "PLACEHOLDER_S5", "PLACEHOLDER_S6", "PLACEHOLDER_S7", "PLACEHOLDER_S8",
+  "PLACEHOLDER_S9", "PLACEHOLDER_S10", "PLACEHOLDER_S11", "PLACEHOLDER_S12",
+  "PLACEHOLDER_S13", "PLACEHOLDER_S14", "PLACEHOLDER_S15"
+];
 
 export const subjects: SubjectData[] = [
   {
@@ -147,44 +161,44 @@ export const subjects: SubjectData[] = [
   {
     id: "hindi",
     name: "Hindi",
-    description: "Kshitij – श्रेणी भाग 2 \u0026 Sparsh \u2013 स्पर्श",
+    description: "Kshitij – क्षितिज भाग 2 \u0026 Sparsh \u2013 स्पर्श",
     icon: "scroll",
     color: "#f97316",
     chapters: [
-      // Kshitij (Part 2) - prose, poem, letter, notice
-      { id: "hindi-k1", subjectId: "hindi", number: 1, title: "वे आँखें मीथी को परबत करो", description: "प्रयावरण के प्रभाव और प्रदूषण", youtubeVideoId: hindiKshitijIds[0], duration: "12:00" },
-      { id: "hindi-k2", subjectId: "hindi", number: 2, title: "तुम काबून हो मेरे पास", description: "व्यक्तिगत कविता", youtubeVideoId: hindiKshitijIds[1], duration: "10:00" },
-      { id: "hindi-k3", subjectId: "hindi", number: 3, title: "जल्प्रलय और कलु कुमार की उनकोटी", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiKshitijIds[2], duration: "14:00" },
-      { id: "hindi-k4", subjectId: "hindi", number: 4, title: "मेरे छोटे से नीजी पुस्तकालय", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiKshitijIds[3], duration: "11:00" },
-      { id: "hindi-k5", subjectId: "hindi", number: 5, title: "हामिद खाँ", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiKshitijIds[4], duration: "13:00" },
-      { id: "hindi-k6", subjectId: "hindi", number: 6, title: "नए इलाके में", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiKshitijIds[5], duration: "12:00" },
-      { id: "hindi-k7", subjectId: "hindi", number: 7, title: "आग", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiKshitijIds[6], duration: "10:00" },
-      { id: "hindi-k8", subjectId: "hindi", number: 8, title: "दिया जले उसी जमीन", description: "व्यक्तिगत कविता", youtubeVideoId: hindiKshitijIds[7], duration: "09:00" },
-      { id: "hindi-k9", subjectId: "hindi", number: 9, title: "ज़िप्रिया प्रयोग और टिप़िया घर", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiKshitijIds[8], duration: "11:00" },
-      { id: "hindi-k10", subjectId: "hindi", number: 10, title: "किब्बिली", description: "व्यक्तिगत कविता", youtubeVideoId: hindiKshitijIds[9], duration: "08:00" },
-      { id: "hindi-k11", subjectId: "hindi", number: 11, title: "शुक्रतारे के समान", description: "व्यक्तिगत कविता", youtubeVideoId: hindiKshitijIds[10], duration: "09:00" },
-      { id: "hindi-k12", subjectId: "hindi", number: 12, title: "पंडित जवाहरलाल नेहरू", description: "व्यक्तिगत जीवनी", youtubeVideoId: hindiKshitijIds[11], duration: "15:00" },
-      { id: "hindi-k13", subjectId: "hindi", number: 13, title: "गिर कविता", description: "व्यक्तिगत कविता", youtubeVideoId: hindiKshitijIds[12], duration: "10:00" },
-      { id: "hindi-k14", subjectId: "hindi", number: 14, title: "अंधेर नगरी चौपट राजा", description: "व्यंग्यास", youtubeVideoId: hindiKshitijIds[13], duration: "12:00" },
-      { id: "hindi-k15", subjectId: "hindi", number: 15, title: "सचिव की सूचना पत्र", description: "व्यक्तिगत पत्र", youtubeVideoId: hindiKshitijIds[14], duration: "11:00" },
-      { id: "hindi-k16", subjectId: "hindi", number: 16, title: "स्नेही को पत्र", description: "व्यक्तिगत पत्र", youtubeVideoId: hindiKshitijIds[15], duration: "10:00" },
-      { id: "hindi-k17", subjectId: "hindi", number: 17, title: "ग्राम शिल्पी", description: "व्यक्तिगत जीवनी", youtubeVideoId: hindiKshitijIds[16], duration: "14:00" },
-      // Sparsh (supplementary)
-      { id: "hindi-s1", subjectId: "hindi", number: 18, title: "धूल", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiSparshIds[0], duration: "12:00" },
-      { id: "hindi-s2", subjectId: "hindi", number: 19, title: "गाय", description: "व्यक्तिगत कविता", youtubeVideoId: hindiSparshIds[1], duration: "10:00" },
-      { id: "hindi-s3", subjectId: "hindi", number: 20, title: "किदाब और मैं म्यूज़िक से कुछ दिन", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiSparshIds[2], duration: "11:00" },
-      { id: "hindi-s4", subjectId: "hindi", number: 21, title: "चांदीनी और मैं", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiSparshIds[3], duration: "09:00" },
-      { id: "hindi-s5", subjectId: "hindi", number: 22, title: "जीवन का संघर्ष के बाद कुछ दिन", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiSparshIds[4], duration: "08:00" },
-      { id: "hindi-s6", subjectId: "hindi", number: 23, title: "मात्रृभूमि का अस्मिता निर्दार की मेो क्वाल", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiSparshIds[5], duration: "12:00" },
-      { id: "hindi-s6b", subjectId: "hindi", number: 24, title: "जिस पुस्तक में तिन कहानियां हैं", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiSparshIds[6], duration: "10:00" },
-      { id: "hindi-s7", subjectId: "hindi", number: 25, title: "श़ुक्रीया", description: "व्यक्तिगत कविता", youtubeVideoId: hindiSparshIds[7], duration: "09:00" },
-      { id: "hindi-s8", subjectId: "hindi", number: 26, title: "व्यंग्यास", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiSparshIds[8], duration: "11:00" },
-      { id: "hindi-s9", subjectId: "hindi", number: 27, title: "एक मकान ई की विभा है", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiSparshIds[9], duration: "10:00" },
-      { id: "hindi-s10", subjectId: "hindi", number: 28, title: "बालड़ि ज़िमेदारी", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiSparshIds[10], duration: "13:00" },
-      { id: "hindi-s11", subjectId: "hindi", number: 29, title: "क्या च़ूते हैं लम्बी मटि क़़ुरसानी साहब", description: "व्यक्तिगत व्यंग्यास", youtubeVideoId: hindiSparshIds[11], duration: "11:00" },
-      { id: "hindi-s12", subjectId: "hindi", number: 30, title: "कौन सिंह सिंह को क्यों पसंद करती है", description: "व्यक्तिगत कहानी", youtubeVideoId: hindiSparshIds[12], duration: "12:00" },
-      { id: "hindi-s13", subjectId: "hindi", number: 31, title: "रहीम के दोहे", description: "व्यक्तिगत दोहा", youtubeVideoId: hindiSparshIds[13], duration: "08:00" },
-      { id: "hindi-s14", subjectId: "hindi", number: 32, title: "कबीर", description: "व्यक्तिगत दोहा", youtubeVideoId: hindiSparshIds[14], duration: "09:00" },
+      // Kshitij (Part 2) - 17 chapters
+      { id: "hindi-k1", subjectId: "hindi", number: 1, title: "दो बैलों की कथा", description: "Two bullocks' story - moral tale about conflict and resolution", youtubeVideoId: hindiKshitijIds[0], duration: "12:00" },
+      { id: "hindi-k2", subjectId: "hindi", number: 2, title: "ल्हासा की ओर", description: "Journey towards Lhasa - travelogue about Tibet", youtubeVideoId: hindiKshitijIds[1], duration: "14:00" },
+      { id: "hindi-k3", subjectId: "hindi", number: 3, title: "उपभोक्तावाद की संस्कृति", description: "Consumerism culture - essay on materialism", youtubeVideoId: hindiKshitijIds[2], duration: "12:00" },
+      { id: "hindi-k4", subjectId: "hindi", number: 4, title: "साँवले सपनों की याद", description: "Memory of dusky dreams - nostalgic prose", youtubeVideoId: hindiKshitijIds[3], duration: "11:00" },
+      { id: "hindi-k5", subjectId: "hindi", number: 5, title: "नाना साहब की पुत्री देवी मैना को भस्म कर दिया गया", description: "Historical account of Nana Saheb's daughter", youtubeVideoId: hindiKshitijIds[4], duration: "15:00" },
+      { id: "hindi-k6", subjectId: "hindi", number: 6, title: "प्रेमचंद के फटे जूते", description: "Premchand's torn shoes - tribute to the writer", youtubeVideoId: hindiKshitijIds[5], duration: "13:00" },
+      { id: "hindi-k7", subjectId: "hindi", number: 7, title: "मेरे बचपन के दिन", description: "My childhood days - autobiographical essay", youtubeVideoId: hindiKshitijIds[6], duration: "14:00" },
+      { id: "hindi-k8", subjectId: "hindi", number: 8, title: "एक कुत्ता और एक मैना", description: "A dog and a myna - humorous story", youtubeVideoId: hindiKshitijIds[7], duration: "11:00" },
+      { id: "hindi-k9", subjectId: "hindi", number: 9, title: "साखियाँ", description: "Sakhis - Kabir's couplets", youtubeVideoId: hindiKshitijIds[8], duration: "10:00" },
+      { id: "hindi-k10", subjectId: "hindi", number: 10, title: "वख", description: "Vakh - Lal Ded's mystic verses", youtubeVideoId: hindiKshitijIds[9], duration: "09:00" },
+      { id: "hindi-k11", subjectId: "hindi", number: 11, title: "सवैये", description: "Savaiye - Rahim's poems", youtubeVideoId: hindiKshitijIds[10], duration: "10:00" },
+      { id: "hindi-k12", subjectId: "hindi", number: 12, title: "कैदी और कोकिला", description: "Prisoner and the cuckoo - social commentary", youtubeVideoId: hindiKshitijIds[11], duration: "13:00" },
+      { id: "hindi-k13", subjectId: "hindi", number: 13, title: "ग्राम श्री", description: "Village beauty - descriptive essay", youtubeVideoId: hindiKshitijIds[12], duration: "12:00" },
+      { id: "hindi-k14", subjectId: "hindi", number: 14, title: "चंद्र गहना से लौटती बेर", description: "Returning from the moon's necklace - poem", youtubeVideoId: hindiKshitijIds[13], duration: "11:00" },
+      { id: "hindi-k15", subjectId: "hindi", number: 15, title: "मेघ आए", description: "Clouds arrived - rain poem by Surdas", youtubeVideoId: hindiKshitijIds[14], duration: "10:00" },
+      { id: "hindi-k16", subjectId: "hindi", number: 16, title: "यमराज की दिशा", description: "Direction of Yamaraj - philosophical poem", youtubeVideoId: hindiKshitijIds[15], duration: "11:00" },
+      { id: "hindi-k17", subjectId: "hindi", number: 17, title: "बच्चे कामदेनी फार्मूला", description: "Children's formula - poem on child labour", youtubeVideoId: hindiKshitijIds[16], duration: "12:00" },
+      // Sparsh (Part 2) - 15 chapters
+      { id: "hindi-s1", subjectId: "hindi", number: 18, title: "धूल", description: "Dust - poem by Sarveshwar Dayal Saxena", youtubeVideoId: hindiSparshIds[0], duration: "11:00" },
+      { id: "hindi-s2", subjectId: "hindi", number: 19, title: "गद्य की कविता", description: "Prose poetry - by Kaka Kalelkar", youtubeVideoId: hindiSparshIds[1], duration: "12:00" },
+      { id: "hindi-s3", subjectId: "hindi", number: 20, title: "किट्टू-कमाता", description: "Kittu-Kamata - story by Premchand", youtubeVideoId: hindiSparshIds[2], duration: "14:00" },
+      { id: "hindi-s4", subjectId: "hindi", number: 21, title: "मेज पर किताब", description: "Book on the table - poem by Sumitranandan Pant", youtubeVideoId: hindiSparshIds[3], duration: "10:00" },
+      { id: "hindi-s5", subjectId: "hindi", number: 22, title: "माता का आँचल", description: "Mother's lap - poem by Shivmangal Singh Suman", youtubeVideoId: hindiSparshIds[4], duration: "11:00" },
+      { id: "hindi-s6", subjectId: "hindi", number: 23, title: "मौत की अपार्टमेंट", description: "Death's apartment - story by Yashpal", youtubeVideoId: hindiSparshIds[5], duration: "15:00" },
+      { id: "hindi-s7", subjectId: "hindi", number: 24, title: "पैर नीचे बिस्तर", description: "Feet under the bed - poem by Phanishwar Nath Renu", youtubeVideoId: hindiSparshIds[6], duration: "11:00" },
+      { id: "hindi-s8", subjectId: "hindi", number: 25, title: "शुक्रिया", description: "Thank you - poem by Suryakant Tripathi Nirala", youtubeVideoId: hindiSparshIds[7], duration: "10:00" },
+      { id: "hindi-s9", subjectId: "hindi", number: 26, title: "साकेत", description: "Saket - epic poem by Maithilisharan Gupt", youtubeVideoId: hindiSparshIds[8], duration: "13:00" },
+      { id: "hindi-s10", subjectId: "hindi", number: 27, title: "दूरी", description: "Distance - poem by Hazari Prasad Dwivedi", youtubeVideoId: hindiSparshIds[9], duration: "11:00" },
+      { id: "hindi-s11", subjectId: "hindi", number: 28, title: "मनमेजर", description: "Manmejar - poem by Nagarjun", youtubeVideoId: hindiSparshIds[10], duration: "10:00" },
+      { id: "hindi-s12", subjectId: "hindi", number: 29, title: "बादल राग", description: "Cloud melody - poem by Ramdhari Singh Dinkar", youtubeVideoId: hindiSparshIds[11], duration: "12:00" },
+      { id: "hindi-s13", subjectId: "hindi", number: 30, title: "तोप", description: "Cannon - poem by Kedarnath Agarwal", youtubeVideoId: hindiSparshIds[12], duration: "11:00" },
+      { id: "hindi-s14", subjectId: "hindi", number: 31, title: "नीले पानी", description: "Blue water - poem by Meghnad Bhattacharya", youtubeVideoId: hindiSparshIds[13], duration: "10:00" },
+      { id: "hindi-s15", subjectId: "hindi", number: 32, title: "दोहे (रहीम और कबीर)", description: "Dohas by Rahim and Kabir - moral couplets", youtubeVideoId: hindiSparshIds[14], duration: "12:00" },
     ],
   },
 ];

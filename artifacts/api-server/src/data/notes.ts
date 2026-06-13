@@ -1920,6 +1920,486 @@ export const allNotes: ChapterNotes[] = [
     ],
     summary: "'The Beggar' by Anton Chekhov tells how a drunk beggar named Lushkoff is transformed by the dignity of work and the compassion of a cook named Olga. The story shows that giving work and respect changes lives more than charity."
   },
+
+  // ==================== HINDI KSHITIJ (1-17) ====================
+  {
+    chapterId: "hindi-k1", subjectId: "hindi", chapterNumber: 1, chapterTitle: "दो बैलों की कथा",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Kaka Kalelkar - famous Gujarati writer and Gandhi's follower",
+      "Kahaani do baiilon ki jhagde aur unke baad ki sambhaavnaaon ke baare mein hai",
+      "Do baiile khet mein kaam karte hain aur unke beech jhagdaa hota hai",
+      "Gaaon ke log jhagde ko dekh kar shor machaate hain, par koi hal nahi nikaalta",
+      "Lekhak yeh darshaata hai ki jhagde ko sulajhaane ke liye koi bhi aage nahi aata",
+      "Ant mein, do baiile aapas mein mil jaate hain, lekin log unke pichhe shor karte rehte hain",
+      "Theme: Logon ki jhagde dekhne ki aadat, par koi hal nahi karna; samajh ki bebasi",
+      "Do baiilon ka jhagdaa samajh ke jhagdon ka pratik hai",
+      "Lekhak kehna chahta hai ki log jhagde sulajhaane ke bajaye unhe badhaate hain",
+      "Kahaani bataati hai ki samajhik samasyaon ka hal nikaalna hamari zimmedaari hai"
+    ],
+    summary: "'दो बैलों की कथा' by Kaka Kalelkar is a story about two bullocks that fight in a field. The villagers make noise but no one solves the problem. The bullocks make peace but the people continue to fight. The story is a satire on society's tendency to create problems rather than solve them."
+  },
+  {
+    chapterId: "hindi-k2", subjectId: "hindi", chapterNumber: 2, chapterTitle: "ल्हासा की ओर",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Rahul Sankrityayan - famous Hindi traveller and writer",
+      "Yeh ek yatra vrittant hai jo lekhak ki Lhasa (Tibet) ki yatra ko darshaata hai",
+      "Lekhak Nepal se hokar Tibet ki oonchi pahaadiyon ko paar karta hai",
+      "Raste mein bahut kathinaaiyan hain: thand, barf, oonchaai, aur kathin rasta",
+      "Lekhak Tibet ke logon ki saadgi, dhaarmik vishwaas, aur jeevan shaili ko varnit karta hai",
+      "Tibet ke log Buddhism ko apnaate hain aur unka jeevan sadguni hai",
+      "Lhasa mein Potala Palace, Jokhang Temple, aur anya prasiddh sthalein hain",
+      "Lekhak Tibet ke samajh, sanskriti, aur prakriti ko bahut sundar roop mein bayan karta hai",
+      "Theme: Yatra, prakriti, aur samajhik jeevan; thand raste pe himmat ki taakat"
+    ],
+    summary: "'ल्हासा की ओर' by Rahul Sankrityayan is a travelogue describing the journey to Lhasa, Tibet. The writer describes the difficulties of the Himalayan route, the simplicity of Tibetan people, and the beauty of Tibetan culture and Buddhism."
+  },
+  {
+    chapterId: "hindi-k3", subjectId: "hindi", chapterNumber: 3, chapterTitle: "उपभोक्तावाद की संस्कृति",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Rabindranath Tagore - Nobel laureate Bengali writer, translated into Hindi",
+      "Yeh ek nivandh hai jo upbhoktaavaad ki samasya ko darshaata hai",
+      "Lekhak aadhunik samajh mein vastuon ki pradhaanata ko criticise karta hai",
+      "Logon ki soch ab samaan ki jagah vastuon ki or badh gayi hai",
+      "Sansaar ki samriddhi ko vyaktigat sampatti se naapna galat hai",
+      "Lekhak kehna chahta hai ki asli samriddhi aatmik shanti aur gyaan hai, na ki vastuon ka sangrah",
+      "Upbhoktaavaad ne insaan ko maanavtaa se vastu bana diya hai",
+      "Lekhak un samajhon ko praise karta hai jinmein samajhik jeevan aur saadgi hai",
+      "Theme: Upbhoktaavaad ki samasya, aatmik samriddhi, aur samajhik jeevan"
+    ],
+    summary: "'उपभोक्तावाद की संस्कृति' by Rabindranath Tagore is an essay criticizing consumerism. The writer argues that modern society prioritizes material possessions over human values, and that true wealth is spiritual peace and knowledge, not material accumulation."
+  },
+  {
+    chapterId: "hindi-k4", subjectId: "hindi", chapterNumber: 4, chapterTitle: "साँवले सपनों की याद",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Yashpal - famous Hindi novelist and revolutionary writer",
+      "Yeh ek smaran lekh hai jo lekhak ke bachpan ke dino ki yaadon ko darshaata hai",
+      "Lekhak apne bachpan ke saadheen aur kathin dino ko yaad karta hai",
+      "Bachpan ke sapne saanvale the, matlab unmein utna ujaala nahi tha, par phir bhi yaadgaar the",
+      "Lekhak apne parivaar, gaaon, aur bachpan ke doston ko yaad karta hai",
+      "Bachpan ke sapne aaj bhi lekhak ke man ko chhoo jaate hain",
+      "Yeh yaadein lekhak ko jeevan ki kathinaaiyon se ladne ki shakti deti hain",
+      "Theme: Bachpan ki yaadein, samay ka pravaah, aur smriti ki shakti"
+    ],
+    summary: "'साँवले सपनों की याद' by Yashpal is a nostalgic essay about childhood memories. The writer recalls the simple, sometimes difficult days of his youth, and how those memories still give him strength to face life's challenges."
+  },
+  {
+    chapterId: "hindi-k5", subjectId: "hindi", chapterNumber: 5, chapterTitle: "नाना साहब की पुत्री देवी मैना को भस्म कर दिया गया",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Swami Anand - a freedom fighter and Hindi writer",
+      "Yeh ek aitihasik lekh hai jo 1857 ki Kranti ke dauran ki ghatna ko darshaata hai",
+      "Nana Saheb ki beti Devi Meena ko angrezon ne maara tha, unhe jala diya gaya",
+      "Angrezon ne is ghatna ko 'amar prem' kaha, par yeh ek chhal tha",
+      "Lekhak angrezon ki prachar ke aadhaar par yeh sach bayaan karta hai",
+      "Asli kahani yeh hai ki Devi Meena ka vivah angrez officer ke saath ho gaya, phir bhi unhe jala diya",
+      "Angrezon ne prachaar ke liye is ghatna ko apne faayde ke liye istemal kiya",
+      "Theme: Itihaas ki sach, angrezon ki chhal, aur 1857 ki kranti ki kathor sachchaai"
+    ],
+    summary: "'नाना साहब की पुत्री देवी मैना को भस्म कर दिया गया' by Swami Anand is a historical essay about the 1857 revolt. The writer exposes the truth behind the British propaganda about Devi Meena, Nana Saheb's daughter, and reveals how the British twisted historical facts for their advantage."
+  },
+  {
+    chapterId: "hindi-k6", subjectId: "hindi", chapterNumber: 6, chapterTitle: "प्रेमचंद के फटे जूते",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Anupama Kumar - a Hindi writer and critic",
+      "Yeh ek lekh hai jo Premchand ke jeevan ko unke jooton ke madhyam se darshaata hai",
+      "Premchand bahut hi saadharan jeevan jeete the, unke paas khoob sampatti nahi thi",
+      "Ek baar kisi ne Premchand ke phate jooton ko dekha toh sharminda ho gaye",
+      "Premchand ne kaha ki unke jooton mein unka aadarsh hai: saadgi, imandari, aur karm",
+      "Lekhak yeh darshaata hai ki asli mahanta vyaktigat sampatti mein nahi, aadarshon mein hai",
+      "Premchand ne apne jeevan mein saadgi, samata, aur samajhik nyaay ko pradhaan diya",
+      "Theme: Premchand ki saadgi, saahitik mahanta, aur aadarshon ki shakti"
+    ],
+    summary: "'प्रेमचंद के फटे जूते' by Anupama Kumar is an essay about the great Hindi writer Munshi Premchand. The writer shows Premchand's simplicity through his worn-out shoes, demonstrating that true greatness lies in ideals, not wealth."
+  },
+  {
+    chapterId: "hindi-k7", subjectId: "hindi", chapterNumber: 7, chapterTitle: "मेरे बचपन के दिन",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Harivansh Rai Bachchan - famous Hindi poet and writer",
+      "Yeh ek aatmakathaatmak lekh hai jo lekhak ke bachpan ke dino ki yaadon ko darshaata hai",
+      "Lekhak Allahabad ke bachpan mein bitaaye hue dino ko yaad karta hai",
+      "Bachpan mein saadhaaran khel, paathshaala, aur dosti ke din bahut yaadgaar the",
+      "Lekhak ke pita ne unhe saadguni jeevan jeene ka sabak diya",
+      "Gaaon ke prakriti, gaaon ke log, aur unka saadhaaran jeevan lekhak ko bahut pasand tha",
+      "Bachpan ke dino ki yaadein aaj bhi lekhak ko prerit karti hain",
+      "Theme: Bachpan ki yaadein, pita ka prabhav, aur saadhaaran jeevan ki sundarta"
+    ],
+    summary: "'मेरे बचपन के दिन' by Harivansh Rai Bachchan is an autobiographical essay about the writer's childhood in Allahabad. He recalls the simple games, school days, and friendships, and how his father's teachings shaped his values."
+  },
+  {
+    chapterId: "hindi-k8", subjectId: "hindi", chapterNumber: 8, chapterTitle: "एक कुत्ता और एक मैना",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Kaka Kalelkar - famous Gujarati writer and Gandhi's follower",
+      "Yeh ek haasya-katha hai jo ek kutte aur ek maina ke beech ki dosti ko darshaati hai",
+      "Kutte aur maina ke beech ek anokhi dosti hai, dono ek doosre se baatein karte hain",
+      "Maina kutte ko hamesha uplabdhiyaan deti hai, aur kutta use hamesha bhaukta hai",
+      "Ek din maina ko maarne ki koshish ki jaati hai, toh kutta usse bachaata hai",
+      "Lekhak yeh darshaata hai ki dost ke liye kuchh bhi karna chahiye, bina matlab ke",
+      "Theme: Dosti, vishwaas, aur ek doosre ki raksha; jaanwaron mein bhi sneh hota hai"
+    ],
+    summary: "'एक कुत्ता और एक मैना' by Kaka Kalelkar is a humorous story about the friendship between a dog and a myna. The dog always barks at the myna but when someone tries to harm the myna, the dog protects it. The story shows that true friendship means helping without expecting anything."
+  },
+  {
+    chapterId: "hindi-k9", subjectId: "hindi", chapterNumber: 9, chapterTitle: "साखियाँ",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Kabir - a 15th-century bhakti saint and poet",
+      "Sakhiyaan are Kabir's couplets (dohas) that teach moral and spiritual lessons",
+      "Kabir was a weaver who became a saint, and his teachings are universal",
+      "He preached unity of all religions, equality of all humans, and devotion to one God",
+      "His sakhiyaan teach about truth, love, compassion, and self-knowledge",
+      "Kabir said that one should not discriminate on the basis of caste or religion",
+      "He criticized superstition, hypocrisy, and blind rituals",
+      "His teachings are simple, direct, and in common language",
+      "Theme: Bhakti, samata, and aadhyatmik gyaan; dharmon ki ekata"
+    ],
+    summary: "'साखियाँ' by Kabir are couplets that teach moral and spiritual lessons. Kabir preached the unity of all religions, equality of humans, and devotion to one God. His teachings are simple, direct, and universal."
+  },
+  {
+    chapterId: "hindi-k10", subjectId: "hindi", chapterNumber: 10, chapterTitle: "वख",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Lal Ded (Lalleshwari) - a 14th-century Kashmiri mystic poet",
+      "Vakh are mystic verses in the Kashmiri language, translated into Hindi",
+      "Lal Ded was a saint who preached self-knowledge and devotion to God",
+      "Her vakh are short, profound, and teach spiritual wisdom",
+      "She says that the soul is the same as God, and we are all part of the divine",
+      "Her teachings are about self-realization, detachment, and love for God",
+      "Lal Ded was a strong woman who challenged orthodoxy and preached equality",
+      "Theme: Aadhyatmik gyaan, aatm-sakshatkaar, and bhakti"
+    ],
+    summary: "'वख' by Lal Ded (Lalleshwari) are mystic verses from 14th-century Kashmir. The saint poet preached self-knowledge, devotion to God, and the unity of the soul with the divine. Her teachings are profound and universal."
+  },
+  {
+    chapterId: "hindi-k11", subjectId: "hindi", chapterNumber: 11, chapterTitle: "सवैये",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Rahim Das - a 16th-century poet and one of the Navaratnas of Akbar's court",
+      "Savaiye are a form of poetry that Rahim used to write moral and social messages",
+      "Rahim was a scholar, statesman, and poet known for his generosity and wisdom",
+      "His poems teach about love, humanity, generosity, and social harmony",
+      "He preached that all humans are equal and that we should serve others",
+      "His famous doha: 'Rahiman paani rakhiye, bin paani sab soon' (keep water, without water everything is dry)",
+      "Theme: Manavata, udaarata, aur samajhik samrasta; naitik shiksha"
+    ],
+    summary: "'सवैये' by Rahim Das are moral poems from the 16th century. Rahim, one of Akbar's Navaratnas, wrote about love, humanity, generosity, and social harmony. His teachings are timeless and universal."
+  },
+  {
+    chapterId: "hindi-k12", subjectId: "hindi", chapterNumber: 12, chapterTitle: "कैदी और कोकिला",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Makhanlal Chaturvedi - a famous Hindi poet and journalist",
+      "Yeh ek kavita hai jo ek kaidee aur kokila ke beech ke sambandh ko darshaati hai",
+      "Kaidi ek jail mein hai aur kokila ke gaane sunke khush hota hai",
+      "Kokila kaidi ke bandhan ko samajhti hai aur uske liye gaati hai",
+      "Kokila ke gaane kaidi ko swatantra ki prerna dete hain",
+      "Ek din kokila kaidi ke haathon mein gir jaati hai, aur kaidi use aazaad kar deta hai",
+      "Lekhak yeh darshaata hai ki aazaad hamesha aazaad ko pehchaan sakta hai",
+      "Theme: Swatantra, sahaanubhuti, aur prakriti ke jeevon se sneh"
+    ],
+    summary: "'कैदी और कोकिला' by Makhanlal Chaturvedi is a poem about a prisoner and a cuckoo bird. The prisoner listens to the cuckoo's song and is inspired. The poem shows that freedom recognizes freedom and that nature can inspire even in the darkest places."
+  },
+  {
+    chapterId: "hindi-k13", subjectId: "hindi", chapterNumber: 13, chapterTitle: "ग्राम श्री",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Sumitranandan Pant - a famous Hindi poet (Chhayavaad movement)",
+      "Yeh ek kavita hai jo ek gaan ki sundarta ko darshaati hai",
+      "Lekhak gaan ki prakriti, khet, khalihan, aur nadiyon ko varnit karta hai",
+      "Gaon ki subah, shaam, raat, aur prakriti ke rango ko bahut khubsoorati se likha hai",
+      "Lekhak kehna chahta hai ki gaan ki jeevan shaili shahar se alag hai, ismein shanti hai",
+      "Gaon ke log saadheen, mehnati, aur ek doosre se jude huye hain",
+      "Theme: Gaan ki sundarta, prakriti prem, aur saadheen jeevan ki mahatta"
+    ],
+    summary: "'ग्राम श्री' by Sumitranandan Pant is a poem describing the beauty of a village. The poet portrays the nature, fields, rivers, and the simple, peaceful life of the village. It contrasts with the city life and celebrates the beauty of nature."
+  },
+  {
+    chapterId: "hindi-k14", subjectId: "hindi", chapterNumber: 14, chapterTitle: "चंद्र गहना से लौटती बेर",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Kedarnath Agrawal - a modern Hindi poet",
+      "Yeh ek kavita hai jo ek ber (jujube) ko darshaati hai jo chandramaa se aati hai",
+      "Ber gaan ki prakriti ka pratik hai, aur chandramaa uski sundarta ko badhata hai",
+      "Kavita mein prakriti ke rango, mausam, aur bhavnaaon ko bahut khubsoorati se darshaaya hai",
+      "Lekhak chandramaa se aati ber ko ek saadheen, paavan vastu ke roop mein darshaata hai",
+      "Theme: Prakriti ki sundarta, gaan ka jeevan, aur saadheen khoobsurti"
+    ],
+    summary: "'चंद्र गहना से लौटती बेर' by Kedarnath Agrawal is a poem about a jujube (ber) that appears to come from the moon. The poet describes the beauty of nature and the simple village life, using the ber as a symbol of natural beauty."
+  },
+  {
+    chapterId: "hindi-k15", subjectId: "hindi", chapterNumber: 15, chapterTitle: "मेघ आए",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Surdas - a 16th-century blind poet and devotee of Krishna",
+      "Yeh ek bhakti kavita hai jo megh (baadalon) ke aane ko darshaati hai",
+      "Surdas Krishna ke bhakti mein likhte the, aur yeh kavita prakriti aur bhakti ka sangam hai",
+      "Megh aane se prakriti khil uthti hai, aur saara sansaar hara-bhara ho jaata hai",
+      "Kavita mein megh ko ek paavan, mangalmay vastu ke roop mein darshaaya hai",
+      "Surdas ne prakriti ke chitrank ko bhakti ke saath milaya",
+      "Theme: Bhakti, prakriti ki sundarta, aur baadalon ke aane ki khushi"
+    ],
+    summary: "'मेघ आए' by Surdas is a devotional poem about the arrival of rain clouds. The blind poet, a devotee of Krishna, describes how the clouds bring life to nature and fill the world with joy. The poem blends devotion with nature."
+  },
+  {
+    chapterId: "hindi-k16", subjectId: "hindi", chapterNumber: 16, chapterTitle: "यमराज की दिशा",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Nagarjun - a famous modern Hindi poet",
+      "Yeh ek kavita hai jo mrityu aur jeevan ke sach ko darshaati hai",
+      "Yamraj mrityu ka devta hai, aur uski disha mrityu ka sanket hai",
+      "Lekhak mrityu ko darr ke bajaye ek saadheen, natural ghatna ke roop mein darshaata hai",
+      "Kavita mein mrityu ke baad jeevan ke anya rupo ko sochne ki prerna hai",
+      "Lekhak kehna chahta hai ki mrityu ek ant hai, lekin jeevan ke anya rupo mein astitva jaari rehta hai",
+      "Theme: Mrityu ka sach, jeevan ki nirantarta, aur aadhyatmik soch"
+    ],
+    summary: "'यमराज की दिशा' by Nagarjun is a philosophical poem about death and the direction of Yamaraj (the god of death). The poet presents death as a natural event rather than something to fear, suggesting that life continues in other forms."
+  },
+  {
+    chapterId: "hindi-k17", subjectId: "hindi", chapterNumber: 17, chapterTitle: "बच्चे कामदेनी फार्मूला",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Renu - a famous Hindi writer from Bihar",
+      "Yeh ek kavita hai jo bachchon ke shram shoshan ko darshaati hai",
+      "Kavita mein bachche jo kaam karte hain, unki sthiti ko khubsoorati se darshaaya hai",
+      "Lekhak bachchon ke adhikaar ko bachaane ka sandesh deta hai",
+      "Bachchon ka formula unke sapnon, khushi, aur shiksha ka hai, lekin unhe shram karne ke liye majboor kiya jaata hai",
+      "Theme: Bachchon ke adhikaar, shiksha ki mahatta, aur bal shram ke khilaaf awaaz"
+    ],
+    summary: "'बच्चे कामदेनी फार्मूला' by Renu is a poem about child labor. The poet shows the condition of children who are forced to work instead of studying and playing. The poem is a call to protect children's rights and end child labor."
+  },
+
+  // ==================== HINDI SPARSH (1-15) ====================
+  {
+    chapterId: "hindi-s1", subjectId: "hindi", chapterNumber: 18, chapterTitle: "धूल",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Sarveshwar Dayal Saxena - a famous Hindi poet and writer",
+      "Yeh ek kavita hai jo dhool (dust) ko ek mahatvapooran prakritik tatva ke roop mein darshaati hai",
+      "Dhool ko aksar ganda samajha jaata hai, lekin kavita mein uski mahatta ko darshaaya hai",
+      "Dhool prakriti ka ek mahatvapooran ang hai, bina uske prakriti adhoori hai",
+      "Lekhak dhool ke dwaara prakriti ke sundar chitranko darshaata hai",
+      "Theme: Prakriti ke ango ki mahatta, dhool ki saadhaaran shakti"
+    ],
+    summary: "'धूल' by Sarveshwar Dayal Saxena is a poem about dust. The poet shows that dust, often seen as dirty, is an important part of nature. The poem celebrates the beauty of ordinary things in nature."
+  },
+  {
+    chapterId: "hindi-s2", subjectId: "hindi", chapterNumber: 19, chapterTitle: "गद्य की कविता",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Kaka Kalelkar - a famous Gujarati writer and Hindi scholar",
+      "Yeh ek nivandh hai jo gadya (prose) ki shakti aur sundarta ko darshaata hai",
+      "Gadya ke kavyatva ko darshaaya hai, ke gadya bhi kavita ke samaan sundar ho sakta hai",
+      "Lekhak kehna chahta hai ki shabd shakti se likha gadya kavita se kam nahi hota",
+      "Theme: Gadya ki shakti, shabd shakti, aur sahitya ki sundarta"
+    ],
+    summary: "'गद्य की कविता' by Kaka Kalelkar is an essay about the poetic quality of prose. The writer argues that prose can be as beautiful as poetry when written with powerful words. The essay celebrates the beauty of literature."
+  },
+  {
+    chapterId: "hindi-s3", subjectId: "hindi", chapterNumber: 20, chapterTitle: "किट्टू-कमाता",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Premchand - the greatest Hindi writer of modern India",
+      "Yeh ek katha hai jo ek chhoti ladki Kittu aur uske pita ke beech ke sambandh ko darshaati hai",
+      "Kittu ke pita ko 'Kamata' kaha jaata hai, aur yeh ek chhota sa bal katha hai",
+      "Kittu ka bachpan saadheen aur mehnat se bhara hai, aur woh apne pita ke saath kaam karti hai",
+      "Katha mein bachchon ki masoomiyat, mehnat, aur unke sapnon ko darshaaya hai",
+      "Premchand ki lekhani mein saadhaaran logon ki jeevan yatharth ko bahut khubsoorati se darshaaya hai",
+      "Theme: Bachpan, mehnat, aur saadheen jeevan ki mahatta"
+    ],
+    summary: "'किट्टू-कमाता' by Premchand is a story about a young girl named Kittu and her hardworking father. The story shows the innocence of childhood, the importance of work, and the simple life of ordinary people."
+  },
+  {
+    chapterId: "hindi-s4", subjectId: "hindi", chapterNumber: 21, chapterTitle: "मेज पर किताब",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Sumitranandan Pant - a famous Hindi poet (Chhayavaad movement)",
+      "Yeh ek kavita hai jo ek mez par rakhi kitaab ko darshaati hai",
+      "Kitaab gyaan, shiksha, aur samay ke pratik hai",
+      "Kavita mein kitaab ke mahatva ko darshaaya hai, aur ke gyaan ke bina jeevan adhoora hai",
+      "Lekhak kitaab ko ek mitra, ek guru, aur ek margdarshak ke roop mein darshaata hai",
+      "Theme: Gyaan, shiksha, aur kitaab ki mahatta"
+    ],
+    summary: "'मेज पर किताब' by Sumitranandan Pant is a poem about a book on a table. The poet sees the book as a symbol of knowledge, education, and guidance. The poem emphasizes the importance of reading and learning."
+  },
+  {
+    chapterId: "hindi-s5", subjectId: "hindi", chapterNumber: 22, chapterTitle: "माता का आँचल",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Shivmangal Singh Suman - a famous Hindi poet and writer",
+      "Yeh ek kavita hai jo maa ke aanchal ko sneh, suraksha, aur mamata ke pratik ke roop mein darshaati hai",
+      "Maa ke aanchal mein bachpan, suraksha, aur saara sansaar hai",
+      "Kavita mein maa ke aanchal ko ek aisa sthaan darshaaya hai jahan bachcha surakshit hai",
+      "Lekhak maa ke aanchal ke dwaara maa ke sneh, samarpan, aur samrakhshan ko darshaata hai",
+      "Theme: Maa ka sneh, aanchal ka pratik, aur mamata"
+    ],
+    summary: "'माता का आँचल' by Shivmangal Singh Suman is a poem about a mother's aanchal (end of sari). The poet uses the aanchal as a symbol of love, protection, and warmth. The poem celebrates the love and sacrifice of a mother."
+  },
+  {
+    chapterId: "hindi-s6", subjectId: "hindi", chapterNumber: 23, chapterTitle: "मौत की अपार्टमेंट",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Yashpal - a famous Hindi novelist and revolutionary writer",
+      "Yeh ek katha hai jo mrityu ko ek apartment ke roop mein darshaati hai",
+      "Katha mein ek aise apartment ke baare mein hai jahan log mrityu ke intezaar mein rehte hain",
+      "Lekhak yeh darshaata hai ki mrityu ek nishchit ghatna hai, lekin log usse darrte hain",
+      "Apartment ke logon ka jeevan, unke sapne, aur unke darr ko bahut khubsoorati se darshaaya hai",
+      "Theme: Mrityu ka darr, jeevan ka mahatva, aur insaan ki kamajori"
+    ],
+    summary: "'मौत की अपार्टमेंट' by Yashpal is a story about death as an apartment. The writer shows people waiting for death and their fears and dreams. The story explores the fear of death and the value of life."
+  },
+  {
+    chapterId: "hindi-s7", subjectId: "hindi", chapterNumber: 24, chapterTitle: "पैर नीचे बिस्तर",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Phanishwar Nath Renu - a famous Hindi writer from Bihar",
+      "Yeh ek kavita hai jo ek saadhaaran ghar ke bistare ke neeche ke jeevan ko darshaati hai",
+      "Kavita mein ek bistare ke neeche ke saadhaaran jeevan, sapne, aur bhavnaaon ko darshaaya hai",
+      "Lekhak saadhaaran cheezon se ek gehra arth nikaalta hai",
+      "Theme: Saadhaaran jeevan, sapne, aur ghar ki gehraai"
+    ],
+    summary: "'पैर नीचे बिस्तर' by Phanishwar Nath Renu is a poem about the life under a bed. The poet finds deep meaning in ordinary things, showing that even simple objects have rich stories and emotions."
+  },
+  {
+    chapterId: "hindi-s8", subjectId: "hindi", chapterNumber: 25, chapterTitle: "शुक्रिया",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Suryakant Tripathi Nirala - a famous Hindi poet of Chhayavaad movement",
+      "Yeh ek kavita hai jo dhanyavaad (shukriya) ke bhavna ko darshaati hai",
+      "Lekhak prakriti, jeevan, aur logo ko dhanyavaad deta hai",
+      "Kavita mein dhanyavaad ko ek bhakti aur sneh ke roop mein darshaaya hai",
+      "Lekhak kehna chahta hai ki dhanyavaad dena ek sadguni hai jo jeevan ko sundar banaata hai",
+      "Theme: Dhanyavaad, sneh, aur sadgun"
+    ],
+    summary: "'शुक्रिया' by Suryakant Tripathi Nirala is a poem about gratitude. The poet thanks nature, life, and people for their blessings. The poem shows that gratitude is a virtue that makes life beautiful."
+  },
+  {
+    chapterId: "hindi-s9", subjectId: "hindi", chapterNumber: 26, chapterTitle: "साकेत",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Maithilisharan Gupt - a famous Hindi poet known for Khari Boli poetry",
+      "Saket is a mahakavya (epic poem) about Lord Rama's life in Saket (Ayodhya)",
+      "Urvashi, a celestial nymph, falls in love with Rama in heaven",
+      "She comes to Earth as a mortal to be with Rama but realizes he is devoted to Sita",
+      "Urvashi is transformed by Rama's divine love and devotion to duty",
+      "The poem blends the worldly and the spiritual, showing Rama's human and divine aspects",
+      "Maithilisharan Gupt wrote in Khari Boli, making Sanskrit epics accessible to common people",
+      "Theme: Bhakti, duty, and the transformation of worldly love into divine love"
+    ],
+    summary: "'साकेत' by Maithilisharan Gupt is an epic poem about Lord Rama in Ayodhya. The celestial nymph Urvashi falls in love with Rama and comes to Earth. The poem shows Rama's devotion to duty and the transformation of love into divine devotion."
+  },
+  {
+    chapterId: "hindi-s10", subjectId: "hindi", chapterNumber: 27, chapterTitle: "दूरी",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Hazari Prasad Dwivedi - a famous Hindi scholar, writer, and poet",
+      "Yeh ek kavita hai jo do logon ke beech ki doori ko darshaati hai",
+      "Kavita mein doori ko ek bhavnaatmak, maansik, aur samajhik roop mein darshaaya hai",
+      "Lekhak kehna chahta hai ki doori sirf shaareerik nahi, balki bhavnaatmak bhi hoti hai",
+      "Theme: Doori, alagav, aur samajhik rishton ki gehraai"
+    ],
+    summary: "'दूरी' by Hazari Prasad Dwivedi is a poem about distance. The poet explores emotional, mental, and social distance between people. The poem shows that distance is not just physical but also emotional and social."
+  },
+  {
+    chapterId: "hindi-s11", subjectId: "hindi", chapterNumber: 28, chapterTitle: "मनमेजर",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Nagarjun - a famous modern Hindi poet",
+      "Yeh ek kavita hai jo man mein chalne wali prakriyaon ko darshaati hai",
+      "Kavita mein man ko ek mejar (manager) ke roop mein darshaaya hai jo sab kuchh sambhaalta hai",
+      "Lekhak kehna chahta hai ki man hi hamare sabhi karmo ka niyantrak hai",
+      "Theme: Man ki shakti, soch, aur karmo ka niyantran"
+    ],
+    summary: "'मनमेजर' by Nagarjun is a poem about the mind as a manager. The poet shows that the mind controls all our actions and thoughts. The poem is about the power of the mind and the importance of controlling it."
+  },
+  {
+    chapterId: "hindi-s12", subjectId: "hindi", chapterNumber: 29, chapterTitle: "बादल राग",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Ramdhari Singh Dinkar - a famous Hindi poet known as Rashtrakavi",
+      "Yeh ek kavita hai jo baadalon ke aane ki khoobsurti ko darshaati hai",
+      "Kavita mein baadalon ke aane se prakriti ka parivartan, hawa, aur mausam ko darshaaya hai",
+      "Dinkar ki kavita mein shakti, josh, aur prakriti ke rango ka anokha sangam hai",
+      "Theme: Baadalon ki shakti, prakriti ki sundarta, aur josh"
+    ],
+    summary: "'बादल राग' by Ramdhari Singh Dinkar is a poem about the arrival of clouds. The poet describes the transformation of nature, the wind, and the weather. The poem is powerful and full of energy, celebrating nature's beauty."
+  },
+  {
+    chapterId: "hindi-s13", subjectId: "hindi", chapterNumber: 30, chapterTitle: "तोप",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Kedarnath Agrawal - a modern Hindi poet",
+      "Yeh ek kavita hai jo topp (cannon) ko ek shakti aur vinaash ke pratik ke roop mein darshaati hai",
+      "Kavita mein topp ko ek aisi vastu ke roop mein darshaaya hai jo shakti aur vinaash donon laati hai",
+      "Lekhak yeh darshaata hai ki shakti ka galat istemal vinaash laata hai",
+      "Theme: Shakti, vinaash, aur shakti ke sahi istemal"
+    ],
+    summary: "'तोप' by Kedarnath Agrawal is a poem about the cannon as a symbol of power and destruction. The poet shows that power, when misused, brings destruction. The poem is a commentary on the consequences of power and war."
+  },
+  {
+    chapterId: "hindi-s14", subjectId: "hindi", chapterNumber: 31, chapterTitle: "नीले पानी",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Meghnad Bhattacharya - a modern Hindi poet",
+      "Yeh ek kavita hai jo neele paani ko ek anokha, saadhaaran, aur sundar prakritik tatva ke roop mein darshaati hai",
+      "Kavita mein neele paani ko ek aisa vastu darshaaya hai jo prakriti ka ek mahatvapooran ang hai",
+      "Lekhak prakriti ke saadhaaran cheezon mein bhi sundarta ko dhoondhta hai",
+      "Theme: Prakriti ki sundarta, saadhaaran cheezon mein bhi khoobsurti"
+    ],
+    summary: "'नीले पानी' by Meghnad Bhattacharya is a poem about blue water. The poet sees beauty in ordinary natural things, showing that even simple elements like water have a unique beauty."
+  },
+  {
+    chapterId: "hindi-s15", subjectId: "hindi", chapterNumber: 32, chapterTitle: "दोहे (रहीम और कबीर)",
+    definitions: [],
+    formulas: [],
+    keyPoints: [
+      "Lekhak: Rahim and Kabir - two great bhakti saints and poets of medieval India",
+      "Dohas are couplets that teach moral, social, and spiritual lessons in simple language",
+      "Kabir preached unity of religions, equality of humans, and devotion to one God",
+      "Rahim preached generosity, humanity, social harmony, and service to others",
+      "Kabir's famous doha: 'Bura jo dekhan main chala, bura na milya koi'",
+      "Rahim's famous doha: 'Rahiman paani rakhiye, bin paani sab soon'",
+      "Both poets wrote in common language, making their teachings accessible to everyone",
+      "Theme: Manavata, samata, dharmon ki ekata, aur naitik shiksha"
+    ],
+    summary: "'दोहे' by Rahim and Kabir are moral couplets that teach spiritual and social lessons. Kabir preached the unity of all religions, while Rahim taught generosity and humanity. Their teachings are timeless and universal."
+  },
 ];
 
 export function getNotesByChapterId(chapterId: string): ChapterNotes | undefined {

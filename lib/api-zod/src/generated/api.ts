@@ -75,6 +75,8 @@ export const GetChapterSummaryResponse = zod.object({
   chapterId: zod.string(),
   summary: zod.string(),
   keyPoints: zod.array(zod.string()),
+  hinglishSummary: zod.string(),
+  hinglishKeyPoints: zod.array(zod.string()),
 });
 
 /**

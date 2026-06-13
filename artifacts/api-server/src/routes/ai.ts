@@ -4,7 +4,7 @@ import { getChapterById, getSubjectById } from "../data/content";
 
 const router = Router();
 
-const summaryCache = new Map<string, { summary: string; keyPoints: string[] }>();
+const summaryCache = new Map<string, { summary: string; keyPoints: string[]; hinglishSummary: string; hinglishKeyPoints: string[] }>();
 const mcqCache = new Map<
   string,
   Array<{ id: string; question: string; options: string[]; correctIndex: number; explanation: string }>
@@ -29,25 +29,36 @@ router.get("/chapters/:chapterId/summary", async (req, res) => {
   try {
     const response = await openai.chat.completions.create({
       model: "gpt-5-mini",
-      max_completion_tokens: 1024,
+      max_completion_tokens: 2048,
       messages: [
         {
           role: "user",
           content: `You are a helpful teacher for CBSE Class 9 students in India.
 
-Generate a concise educational summary for the chapter "${chapter.title}" from ${subjectName} (CBSE Class 9).
+Generate TWO summaries for the chapter "${chapter.title}" from ${subjectName} (CBSE Class 9).
 
 Chapter description: ${chapter.description}
 
+1. ENGLISH SUMMARY: Short, exam-oriented, covers all important points.
+2. HINGLISH SUMMARY: Very easy language. Explain as if teaching a beginner. Use simple English mixed with Hindi/Hinglish words. Include important concepts, characters, formulas and exam tips.
+
 Respond ONLY with a valid JSON object in this exact format:
 {
-  "summary": "A clear 3-4 sentence summary of the chapter concepts for Class 9 students.",
+  "summary": "English summary - 3-4 sentences, exam-focused, key points.",
   "keyPoints": [
     "Key point 1",
     "Key point 2",
     "Key point 3",
     "Key point 4",
     "Key point 5"
+  ],
+  "hinglishSummary": "Hinglish summary - bahut aasaan language mein. Jaise ek dost samjha raha ho. Important concepts, formulas, exam tips include karo.",
+  "hinglishKeyPoints": [
+    "Hinglish point 1 - easy language",
+    "Hinglish point 2 - simple explanation",
+    "Hinglish point 3 - exam tip",
+    "Hinglish point 4 - key concept",
+    "Hinglish point 5 - important formula or character"
   ]
 }`,
         },
@@ -55,7 +66,7 @@ Respond ONLY with a valid JSON object in this exact format:
     });
 
     const content = response.choices[0]?.message?.content ?? "{}";
-    let parsed: { summary: string; keyPoints: string[] };
+    let parsed: { summary: string; keyPoints: string[]; hinglishSummary: string; hinglishKeyPoints: string[] };
     try {
       parsed = JSON.parse(content);
     } catch {
@@ -67,6 +78,14 @@ Respond ONLY with a valid JSON object in this exact format:
           "Review definitions and formulas carefully",
           "Understand the concepts before memorizing",
           "Refer to solved examples to clarify doubts",
+        ],
+        hinglishSummary: `${chapter.title} ek important chapter hai CBSE Class 9 ${subjectName} ke liye. ${chapter.description}. Is chapter ko achhe se samajh lo, exam mein bahut aata hai.`,
+        hinglishKeyPoints: [
+          `${chapter.title} ka concept clear karo - ye ${subjectName} ka base hai`,
+          "NCERT textbook ke questions practice karo - exam mein direct aate hain",
+          "Definitions aur formulas ko carefully padho - confuse mat hona",
+          "Concepts pehle samajh lo, baad mein yaad karna aasan hai",
+          "Solved examples ko refer karo - doubt clear hone mein help karega",
         ],
       };
     }

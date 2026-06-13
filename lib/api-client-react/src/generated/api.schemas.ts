@@ -43,6 +43,8 @@ export interface ChapterSummary {
   chapterId: string;
   summary: string;
   keyPoints: string[];
+  hinglishSummary: string;
+  hinglishKeyPoints: string[];
 }
 
 export interface McqQuestion {

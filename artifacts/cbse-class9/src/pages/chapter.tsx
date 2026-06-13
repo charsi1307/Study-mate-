@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
-import { Sparkles, CheckCircle2, XCircle, BrainCircuit, RefreshCw, AlertCircle } from "lucide-react";
+import { Sparkles, CheckCircle2, XCircle, BrainCircuit, RefreshCw, AlertCircle, Languages, BookOpen, ListChecks, FileText } from "lucide-react";
 import { 
   useGetChapter, 
   getGetChapterQueryKey,
@@ -14,6 +14,8 @@ import {
   getGetChapterMcqsQueryKey,
   useGetChapterQuestions,
   getGetChapterQuestionsQueryKey,
+  useGetChapterNotes,
+  getGetChapterNotesQueryKey,
 } from "@workspace/api-client-react";
 
 function VideoSection({ videoId }: { videoId: string }) {
@@ -38,6 +40,7 @@ function SummarySection({ chapterId }: { chapterId: string }) {
       queryKey: getGetChapterSummaryQueryKey(chapterId),
     }
   });
+  const [activeTab, setActiveTab] = useState<'english' | 'hinglish'>('english');
 
   if (isLoading) {
     return (
@@ -48,10 +51,10 @@ function SummarySection({ chapterId }: { chapterId: string }) {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="text-sm text-muted-foreground flex items-center gap-2 animate-pulse">
-            <Sparkles className="w-4 h-4 text-primary" />
-            Generating AI summary… this takes about 15–20 seconds
-          </p>
+          <div className="flex gap-2 mb-4">
+            <Skeleton className="h-9 w-28" />
+            <Skeleton className="h-9 w-28" />
+          </div>
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-5/6" />
           <Skeleton className="h-4 w-4/5" />
@@ -83,6 +86,10 @@ function SummarySection({ chapterId }: { chapterId: string }) {
     );
   }
 
+  const isEnglish = activeTab === 'english';
+  const currentSummary = isEnglish ? summary.summary : summary.hinglishSummary;
+  const currentKeyPoints = isEnglish ? summary.keyPoints : summary.hinglishKeyPoints;
+
   return (
     <Card className="border-white/5 bg-primary/5 border-primary/20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3 pointer-events-none" />
@@ -92,15 +99,34 @@ function SummarySection({ chapterId }: { chapterId: string }) {
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6 relative z-10">
+        <div className="flex gap-2">
+          <Button
+            size="sm"
+            variant={isEnglish ? 'default' : 'outline'}
+            onClick={() => setActiveTab('english')}
+            className="gap-1.5"
+          >
+            <BookOpen className="w-4 h-4" /> English
+          </Button>
+          <Button
+            size="sm"
+            variant={!isEnglish ? 'default' : 'outline'}
+            onClick={() => setActiveTab('hinglish')}
+            className="gap-1.5"
+          >
+            <Languages className="w-4 h-4" /> Hinglish
+          </Button>
+        </div>
+
         <p className="text-foreground/90 leading-relaxed">
-          {summary.summary}
+          {currentSummary}
         </p>
         <div>
           <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2">
-            <BrainCircuit className="w-4 h-4 text-primary" /> Key Takeaways
+            <BrainCircuit className="w-4 h-4 text-primary" /> {isEnglish ? 'Key Takeaways' : 'Main Points (Asaan Bhasha)'}
           </h4>
           <ul className="space-y-3">
-            {summary.keyPoints.map((point, i) => (
+            {currentKeyPoints?.map((point, i) => (
               <li key={i} className="flex gap-3 text-muted-foreground items-start">
                 <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0 shadow-[0_0_8px_var(--primary)]" />
                 <span className="leading-relaxed">{point}</span>
@@ -110,6 +136,111 @@ function SummarySection({ chapterId }: { chapterId: string }) {
         </div>
       </CardContent>
     </Card>
+  );
+}
+
+function NotesSection({ chapterId }: { chapterId: string }) {
+  const { data: notes, isLoading, error } = useGetChapterNotes(chapterId, {
+    query: {
+      enabled: !!chapterId,
+      queryKey: getGetChapterNotesQueryKey(chapterId),
+    }
+  });
+
+  if (isLoading) {
+    return (
+      <div className="space-y-6">
+        <h3 className="text-xl font-bold flex items-center gap-2">
+          <FileText className="w-5 h-5 text-primary" /> Notes
+        </h3>
+        <Card className="border-white/5 bg-card/50">
+          <CardContent className="space-y-4 p-6">
+            <Skeleton className="h-4 w-full" />
+            <Skeleton className="h-4 w-5/6" />
+            <Skeleton className="h-4 w-4/5" />
+            <Skeleton className="h-4 w-3/4" />
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (error || !notes) {
+    return (
+      <div className="space-y-4">
+        <h3 className="text-xl font-bold flex items-center gap-2">
+          <FileText className="w-5 h-5 text-primary" /> Notes
+        </h3>
+        <Card className="border-white/5 bg-card/50">
+          <CardContent className="py-8 text-center text-muted-foreground">
+            <AlertCircle className="w-6 h-6 text-destructive/60 mx-auto mb-2" />
+            <p>Notes not available for this chapter.</p>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <h3 className="text-xl font-bold flex items-center gap-2">
+        <FileText className="w-5 h-5 text-primary" /> Notes
+      </h3>
+      <Card className="border-white/5 bg-card/50">
+        <CardContent className="space-y-6 p-6">
+          {notes.definitions && notes.definitions.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2 text-sm uppercase tracking-wide text-primary/80">
+                <BookOpen className="w-4 h-4" /> Definitions
+              </h4>
+              <ul className="space-y-2">
+                {notes.definitions.map((def, i) => (
+                  <li key={i} className="flex gap-3 text-muted-foreground items-start text-sm leading-relaxed">
+                    <div className="w-1 h-1 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
+                    <span>{def}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {notes.formulas && notes.formulas.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2 text-sm uppercase tracking-wide text-primary/80">
+                <ListChecks className="w-4 h-4" /> Formulas
+              </h4>
+              <ul className="space-y-2">
+                {notes.formulas.map((f, i) => (
+                  <li key={i} className="flex gap-3 text-muted-foreground items-start text-sm leading-relaxed">
+                    <div className="w-1 h-1 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {notes.keyPoints && notes.keyPoints.length > 0 && (
+            <div>
+              <h4 className="font-semibold text-foreground mb-3 flex items-center gap-2 text-sm uppercase tracking-wide text-primary/80">
+                <Sparkles className="w-4 h-4" /> Key Points
+              </h4>
+              <ul className="space-y-2">
+                {notes.keyPoints.map((k, i) => (
+                  <li key={i} className="flex gap-3 text-muted-foreground items-start text-sm leading-relaxed">
+                    <div className="w-1 h-1 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
+                    <span>{k}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {notes.summary && (
+            <div className="pt-2 border-t border-white/10">
+              <p className="text-sm text-muted-foreground leading-relaxed">{notes.summary}</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
   );
 }
 
@@ -426,6 +557,7 @@ export default function ChapterDetail() {
           <>
             <VideoSection videoId={chapter.youtubeVideoId} />
             <SummarySection chapterId={chapter.id} />
+            <NotesSection chapterId={chapter.id} />
             <div className="h-px bg-border/50 w-full" />
             <PracticeQuestionsSection chapterId={chapter.id} />
             <div className="h-px bg-border/50 w-full" />

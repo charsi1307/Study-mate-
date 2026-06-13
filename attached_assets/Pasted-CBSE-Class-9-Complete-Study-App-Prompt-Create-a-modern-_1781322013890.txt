@@ -1,0 +1,140 @@
+CBSE Class 9 Complete Study App Prompt
+
+Create a modern AI-powered CBSE Class 9 Study Website/App with a clean UI and complete NCERT syllabus.
+
+Video Integration (Most Important)
+
+Do NOT add normal YouTube links.
+
+Instead, every chapter should contain an embedded YouTube player that plays the lecture inside the website/app itself.
+
+- Clicking a chapter should open the video inside the app.
+- User should not leave the app to watch lectures.
+- Use YouTube Embed Player (iframe).
+- Support:
+  - Fullscreen
+  - Mobile Responsive
+  - Captions
+  - Playback Speed
+  - Autoplay OFF
+
+Each chapter should store:
+
+- videoTitle
+- videoId
+- embedUrl
+
+Example:
+
+{
+  "videoTitle": "Number Systems | Class 9",
+  "videoId": "VIDEO_ID",
+  "embedUrl": "https://www.youtube.com/embed/VIDEO_ID"
+}
+
+Mathematics
+
+Use videos ONLY from this channel:
+
+https://youtube.com/@shobhitnirwan-9th?si=BhBMXE0SZy4soCsK
+
+Add all NCERT Maths chapters with the correct lecture.
+
+Do not use any other channel.
+
+---
+
+Science
+
+Use videos ONLY from:
+
+https://youtube.com/@exphub10th?si=XHKYOV0vgQYgKnOD
+
+OR
+
+https://youtube.com/@alakhsir-class9.10?si=1g9Zpdp6L7DM46sK
+
+Choose only the lecture that is 100% verified for CBSE Class 9 NCERT.
+
+Use the better lecture if both channels have the same chapter.
+
+---
+
+Social Science
+
+Add all 22 chapters.
+
+Use videos ONLY from:
+
+https://youtube.com/@digrajsinghrajput214?si=a5uKVoI-16P9m_Gs
+
+No other channel should be used.
+
+---
+
+English
+
+Include complete CBSE Class 9 English:
+
+- Beehive
+- Moments
+- Grammar
+- Writing Skills
+
+(Total around 28 topics)
+
+Use videos ONLY from:
+
+https://youtube.com/@dearsir?si=criZ8Tvwo4NV2JVA
+
+---
+
+Hindi
+
+Arrange all Hindi chapters according to the latest CBSE Class 9 NCERT syllabus.
+
+The previous arrangement is incorrect, so reorder them properly.
+
+Use videos ONLY from:
+
+https://youtube.com/@magnetbrainseducation?si=pUNKWxm_A28IuBlA
+
+or Vedantu (only if Magnet Brains does not have the required chapter).
+
+---
+
+AI Summary
+
+Every chapter must include TWO summaries.
+
+1. English Summary
+
+- Short
+- Exam-oriented
+- Covers all important points
+
+2. Hinglish Summary
+
+- Very easy language
+- Explain as if teaching a beginner
+- Include important concepts, characters, formulas and exam tips
+
+---
+
+Every Chapter Page Should Contain
+
+1. Embedded Video Player
+2. AI Summary (English)
+3. AI Summary (Easy Hinglish)
+4. Important Notes
+5. Important Questions
+6. NCERT Key Points
+7. Revision Points
+
+---
+
+Final Requirement
+
+The website should feel like a complete study platform where students can watch videos, read summaries and revise chapters without opening YouTube or any external website.
+
+Use only the approved channels mentioned above and attach the correct lecture for every chapter.

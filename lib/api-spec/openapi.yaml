@@ -289,13 +289,19 @@ components:
 
     ChapterSummary:
       type: object
-      required: [chapterId, summary, keyPoints]
+      required: [chapterId, summary, keyPoints, hinglishSummary, hinglishKeyPoints]
       properties:
         chapterId:
           type: string
         summary:
           type: string
         keyPoints:
+          type: array
+          items:
+            type: string
+        hinglishSummary:
+          type: string
+        hinglishKeyPoints:
           type: array
           items:
             type: string
