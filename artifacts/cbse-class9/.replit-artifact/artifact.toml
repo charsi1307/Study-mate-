@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Study mate cbse class 9th"
+title = "Charsi CBSE Class 9"
 version = "1.0.0"
 id = "artifacts/cbse-class9"
 router = "path"

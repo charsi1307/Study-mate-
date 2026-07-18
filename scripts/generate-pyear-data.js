@@ -198,4 +198,4 @@ console.log(`Generated ${allChapters.length} chapters with ${totalQs} total ques
 // Verify per-chapter counts
 for (const ch of allChapters) {
   console.log(`  ${ch.chapterId}: ${ch.questions.length} questions`);
-}.  https://study-buddy--Tauhidxtics7175.replit.app
+}

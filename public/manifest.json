@@ -1,11 +1,11 @@
 {
-  "short_name": "StudyMate",
-  "name": "StudyMate Class 9",
-  "description": "CBSE Class 9 education app with video lessons, AI summaries and MCQ practice",
+  "short_name": "Charsi",
+  "name": "Charsi Class 9",
+  "description": "A focused, beautifully crafted study companion for Indian students preparing for CBSE Class 9 exams. Learn through videos, AI summaries, and practice MCQs across 5 subjects.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#6366f1",
+  "background_color": "#581c87",
+  "theme_color": "#7c3aed",
   "orientation": "portrait",
   "scope": "/",
   "icons": [

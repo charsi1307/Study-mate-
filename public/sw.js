@@ -1,14 +1,14 @@
-const CACHE_NAME = "studymate-class9-v1";
+const CACHE_NAME = "charsi-class9-v1";
 const STATIC_ASSETS = [
   "/",
   "/index.html",
   "/manifest.json",
   "/icon-192.png",
   "/icon-512.png",
-  "/favicon.svg",
+  "/favicon.png",
 ];
 
-const API_CACHE_NAME = "studymate-api-v1";
+const API_CACHE_NAME = "charsi-api-v1";
 
 // Install: cache static assets
 self.addEventListener("install", (event) => {
