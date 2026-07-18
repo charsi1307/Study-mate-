@@ -5,4 +5,10 @@ outputs = []
 id = "wLTjLhE0zW2ApG3c0O9CS"
 uri = "file://artifacts/cbse-class9/public/icon-512.png"
 type = "image"
-title = "generated_image"
+title = "PWA icon 512x512"
+
+[[generated]]
+id = "hmLAQGF8x0nLQ5d4HffKC"
+uri = "file://artifacts/cbse-class9/public/icon-192.png"
+type = "image"
+title = "PWA icon 192x192"
