@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Router, type Request, type Response } from "express";
 import { openai } from "@workspace/integrations-openai-ai-server";
 import { getChapterById, getSubjectById } from "../data/content";
 
@@ -10,7 +10,9 @@ const mcqCache = new Map<
   Array<{ id: string; question: string; options: string[]; correctIndex: number; explanation: string }>
 >();
 
-router.get("/chapters/:chapterId/summary", async (req, res) => {
+router.get(
+  "/chapters/:chapterId/summary",
+  async (req: Request<{ chapterId: string }>, res: Response) => {
   const chapter = getChapterById(req.params.chapterId);
   if (!chapter) {
     res.status(404).json({ error: "Chapter not found" });
@@ -96,9 +98,12 @@ Respond ONLY with a valid JSON object in this exact format:
     req.log.error({ err }, "Error generating summary");
     res.status(500).json({ error: "Failed to generate summary" });
   }
-});
+  },
+);
 
-router.get("/chapters/:chapterId/mcqs", async (req, res) => {
+router.get(
+  "/chapters/:chapterId/mcqs",
+  async (req: Request<{ chapterId: string }>, res: Response) => {
   const chapter = getChapterById(req.params.chapterId);
   if (!chapter) {
     res.status(404).json({ error: "Chapter not found" });
@@ -177,6 +182,7 @@ Ensure correctIndex is 0-3 indicating which option (0=A, 1=B, 2=C, 3=D) is corre
     req.log.error({ err }, "Error generating MCQs");
     res.status(500).json({ error: "Failed to generate MCQs" });
   }
-});
+  },
+);
 
 export default router;

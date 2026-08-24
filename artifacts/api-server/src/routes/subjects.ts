@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Router, type Request, type Response } from "express";
 import { subjects, getSubjectById, getChapterById } from "../data/content";
 
 const router = Router();
 
-router.get("/subjects", (req, res) => {
+router.get("/subjects", (_req: Request, res: Response) => {
   const result = subjects.map((s) => ({
     id: s.id,
     name: s.name,
@@ -15,7 +15,9 @@ router.get("/subjects", (req, res) => {
   res.json(result);
 });
 
-router.get("/subjects/:subjectId/chapters", (req, res) => {
+router.get(
+  "/subjects/:subjectId/chapters",
+  (req: Request<{ subjectId: string }>, res: Response) => {
   const subject = getSubjectById(req.params.subjectId);
   if (!subject) {
     res.status(404).json({ error: "Subject not found" });
@@ -31,9 +33,12 @@ router.get("/subjects/:subjectId/chapters", (req, res) => {
     duration: c.duration,
   }));
   res.json(result);
-});
+  },
+);
 
-router.get("/chapters/:chapterId", (req, res) => {
+router.get(
+  "/chapters/:chapterId",
+  (req: Request<{ chapterId: string }>, res: Response) => {
   const chapter = getChapterById(req.params.chapterId);
   if (!chapter) {
     res.status(404).json({ error: "Chapter not found" });
@@ -44,6 +49,7 @@ router.get("/chapters/:chapterId", (req, res) => {
     ...chapter,
     subjectName: subject?.name ?? "",
   });
-});
+  },
+);
 
 export default router;
