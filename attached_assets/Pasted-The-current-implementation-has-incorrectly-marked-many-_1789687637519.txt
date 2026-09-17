@@ -1,0 +1,177 @@
+The current implementation has incorrectly marked many chapters as:
+
+“One Shot video not available for this chapter.”
+
+Fix this across Maths, Science, Social Science, English and Hindi.
+
+IMPORTANT
+
+Do NOT reject a video only because its title does not contain the words “One Shot”.
+
+These are all acceptable if they cover the ENTIRE Class 9 CBSE chapter:
+
+- One Shot
+- Complete Lecture
+- Full Chapter
+- Full Chapter Explanation
+- Chapter Explanation
+- Complete Chapter
+- Long-form Chapter Lecture
+
+Do NOT use short revision videos, Shorts, Important Questions-only videos, exercise-only videos, or partial chapter videos.
+
+---
+
+MATHS
+
+Priority:
+
+1. Shobhit Nirwan – 9th
+
+If a suitable complete chapter video cannot be found after rechecking:
+
+2. PW – Ritik Mishra Sir / Mansi Mam
+
+Recheck existing “unavailable” chapters before marking them unavailable.
+
+---
+
+SCIENCE
+
+Priority:
+
+1. AT Bhaiya – PW
+2. Prashant Kirad
+3. Alakh Pandey
+
+Use a complete chapter explanation/long lecture even when the title does not say “One Shot”.
+
+---
+
+SOCIAL SCIENCE
+
+ONLY DIGRAJ SINGH RAJPUT SIR
+
+Do NOT use any other teacher/channel for SST.
+
+For every Class 9 SST chapter, search/recheck Digraj Singh Rajput Sir's videos.
+
+Accept:
+
+- One Shot
+- Complete Lecture
+- Full Chapter Explanation
+- Complete Chapter
+- Long Chapter Explanation
+
+The entire chapter must be covered.
+
+Do NOT use:
+
+- Other teachers
+- Shorts
+- Important Questions-only videos
+- Revision-only videos
+- Partial chapter videos
+- Class 10/other-class videos
+
+If a Digraj Singh Rajput Sir video exists that completely explains the chapter, use it even if “One Shot” is not written in the title.
+
+---
+
+ENGLISH
+
+Priority:
+
+1. Dear Sir
+
+If a suitable Dear Sir video cannot be found:
+
+2. Any reliable Class 9 English chapter explanation
+
+The complete story/poem/chapter must be explained.
+
+---
+
+HINDI
+
+Use any reliable teacher/channel.
+
+Full Chapter Explanation is preferred.
+
+One Shot is NOT compulsory.
+
+Animated full-chapter explanation videos are also acceptable if they properly cover the complete chapter.
+
+---
+
+VERIFICATION RULE
+
+For EVERY chapter:
+
+1. Verify the exact Class 9 CBSE chapter.
+2. Verify that the video covers the complete chapter.
+3. Verify the correct subject and class.
+4. Verify that the YouTube video exists and opens.
+5. Prefer complete/long explanations over short revisions.
+6. Use the DIRECT YouTube watch URL.
+7. Never use YouTube search URLs.
+8. Never use playlist URLs.
+9. Never invent URLs.
+10. Do not mark a chapter unavailable until all applicable teacher/channel options have been checked.
+
+---
+
+EXISTING DATA
+
+Do NOT change:
+
+- Chapter numbers
+- Chapter names
+- Chapter routes
+- Notes
+- MCQs
+- PYQs
+- Existing UI
+- Existing layout
+- Other existing content
+
+Only update/add the video URL where required.
+
+Use:
+
+videoUrl: "https://www.youtube.com/watch?v=VIDEO_ID"
+
+If an existing video is already valid, keep it.
+
+If it was marked unavailable only because the title didn't contain “One Shot”, search again and add the valid full-chapter video.
+
+---
+
+BUTTON
+
+Change the button text to:
+
+▶ Watch Full Chapter
+
+The button should open the direct YouTube video in a new tab.
+
+---
+
+FINAL CHECK
+
+Go through ALL existing chapters in:
+
+- Maths
+- Science
+- Social Science
+- English
+- Hindi
+
+Remove unnecessary:
+
+“One Shot video not available for this chapter”
+
+messages wherever a valid complete chapter video can be found.
+
+For SST, ONLY Digraj Singh Rajput Sir is allowed.

@@ -1,4 +1,4 @@
-# Charsi Class 9
+# Study Mate Class 9
 
 A CBSE Class 9 education web app for students to learn through YouTube videos, AI-generated summaries, and MCQ practice across 4 subjects.
 

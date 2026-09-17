@@ -1,0 +1,1 @@
+- [Video link verification](video-link-verification.md) — validate chapter/channel matches from YouTube metadata and leave unverified IDs empty.

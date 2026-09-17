@@ -17,7 +17,7 @@ export function Layout({ children, breadcrumbs = [] }: LayoutProps) {
         <div className="container mx-auto px-4 h-16 flex items-center gap-4">
           <Link href="/" className="flex items-center gap-2 text-primary font-bold text-xl hover:opacity-80 transition-opacity">
             <GraduationCap className="h-6 w-6" />
-            <span>Charsi</span>
+            <span className="whitespace-nowrap">Study Mate</span>
           </Link>
 
           <div className="hidden sm:flex items-center gap-1 ml-auto">

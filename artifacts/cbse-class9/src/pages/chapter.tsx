@@ -19,16 +19,34 @@ import {
 } from "@workspace/api-client-react";
 
 function VideoSection({ videoId }: { videoId: string }) {
+  if (!videoId) {
+    return (
+      <div className="aspect-video w-full rounded-2xl border border-white/10 bg-black/40 flex items-center justify-center p-6 text-center text-muted-foreground">
+        A verified full-chapter video is not available for this chapter yet.
+      </div>
+    );
+  }
+
   return (
-    <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-xl">
-      <iframe
-        src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&fs=1`}
-        title="Chapter Video"
-        className="w-full h-full"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-        allowFullScreen
-        referrerPolicy="strict-origin-when-cross-origin"
-      ></iframe>
+    <div className="space-y-3">
+      <div className="aspect-video w-full rounded-2xl overflow-hidden bg-black border border-white/10 shadow-xl">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&fs=1`}
+          title="Chapter Video"
+          className="w-full h-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+          allowFullScreen
+          referrerPolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+      <a
+        href={`https://www.youtube.com/watch?v=${videoId}`}
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        ▶ Watch Full Chapter
+      </a>
     </div>
   );
 }

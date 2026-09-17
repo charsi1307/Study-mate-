@@ -1,0 +1,128 @@
+Update my existing Study Mate Class 9 CBSE app by adding a correct One Shot YouTube video link for EVERY chapter in all 5 subjects.
+
+IMPORTANT:
+
+- Do not change the existing chapter names or serial numbers.
+- Do not create or remove chapters.
+- Keep the exact chapter order already present in the app.
+- Search YouTube and verify every video before adding it.
+- Every video must be a complete One Shot / Full Chapter Explanation, not a short revision, topic-specific video, Shorts, playlist, or random summary.
+- The video must match the exact Class 9 CBSE chapter.
+- Store the actual YouTube video URL in the chapter data.
+- Do NOT use YouTube search-result URLs.
+- Do NOT invent URLs.
+- If a suitable exact video cannot be verified, leave that chapter's video URL empty instead of adding a wrong video.
+
+CHANNEL RULES:
+
+1. MATHS
+
+- Only Shobhit Nirwan
+- One Shot / Complete Lecture only
+
+2. SCIENCE
+
+- Prefer Prashant Kirad
+- If an exact One Shot is not available, use Alakh Pandey
+- One Shot / Complete Chapter only
+
+3. SOCIAL SCIENCE
+
+- Only Digraj Singh Rajput
+- One Shot / Complete Chapter only
+
+4. ENGLISH
+
+- Only Dear Sir
+- One Shot / Complete Chapter only
+
+5. HINDI
+
+- Any reliable educational teacher/channel
+- Select the most-viewed suitable One Shot for the exact chapter
+- It must actually explain that exact chapter
+
+VERY IMPORTANT DATA FORMAT:
+
+For EVERY chapter, add data in this structure:
+
+{
+chapterNumber: 1,
+chapterName: "Number Systems",
+videoUrl: "https://www.youtube.com/watch?v=EXACT_VIDEO_ID"
+}
+
+For example, the verified Maths Chapter 1 entry should be:
+
+{
+chapterNumber: 1,
+chapterName: "Number Systems",
+videoUrl: "https://www.youtube.com/watch?v=IMnSIaPcqiE"
+}
+
+This is the verified Shobhit Nirwan One Shot for Class 9 Maths Chapter 1, Number System.
+
+The final data must follow this pattern:
+
+MATHS
+Chapter 1 — Number Systems
+YouTube: https://...
+
+Chapter 2 — Polynomials
+YouTube: https://...
+
+Chapter 3 — Coordinate Geometry
+YouTube: https://...
+
+Continue for every existing Maths chapter.
+
+Then do exactly the same for:
+
+SCIENCE
+Chapter 1 — Matter in Our Surroundings
+YouTube: https://...
+
+...
+
+SOCIAL SCIENCE
+Chapter 1 — The French Revolution
+YouTube: https://...
+
+...
+
+ENGLISH
+Chapter 1 — The Fun They Had
+YouTube: https://...
+
+...
+
+HINDI
+Chapter 1 — दो बैलों की कथा
+YouTube: https://...
+
+...
+
+IMPORTANT VERIFICATION CHECKLIST:
+For every single link verify:
+
+1. Correct chapter name
+2. Class 9 CBSE
+3. Correct subject
+4. One Shot / Complete Chapter
+5. Correct teacher/channel according to the rules above
+6. Actual YouTube video URL
+7. Video is not a Short
+8. Video is not merely a search result
+9. Do not accidentally assign one chapter's video to another chapter
+
+Use the EXISTING chapter data in the project. Do not replace the current chapter list with a new list.
+
+After updating the data, check the UI:
+
+- Every chapter should have a visible "Watch One Shot" button.
+- Clicking it should open the exact stored YouTube video.
+- Keep the existing Study Mate design and mobile responsiveness unchanged.
+- Do not modify unrelated files or features.
+
+Before finishing, report a verification summary showing:
+Subject | Total Chapters | Links Added | Links Not Found
